@@ -20,6 +20,8 @@ ApplicationRecord.transaction do
     # Create one user
     User.create!(
       email: 'demo@user.io', 
+      first_name: 'demo',
+      last_name: '1',
       password: 'password'
     )
   

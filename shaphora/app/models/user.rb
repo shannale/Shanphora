@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_secure_password
+
     validates :session_token, presence: true, uniqueness: true 
     validates :password_digest, :first_name, :last_name, presence: true 
     validates :email, presence: true, uniqueness: true, length: { in: 3..255 }, format: { with: URI::MailTo::EMAIL_REGEXP }
