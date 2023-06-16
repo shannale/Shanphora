@@ -5,7 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store';
-import csrfFetch, { restoreCSRF } from './store/csrf';
+import csrfFetch from './store/csrf';
+import { restoreCSRF } from './store/session';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -16,8 +17,9 @@ import csrfFetch, { restoreCSRF } from './store/csrf';
 
 const store = configureStore();
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   window.store = store;
+  window.csrfFetch = csrfFetch;
 }
 
 function Root() {
@@ -39,13 +41,8 @@ ReactDOM.render(
 
 
 
-// ... 
-if (process.env.NODE_ENV !== 'production') {
-  window.store = store;
-  window.csrfFetch = csrfFetch;
-}
 
-// ...
+
 
 const renderApplication = () => {
   ReactDOM.render(
