@@ -19,17 +19,26 @@ const removeCurrentUser = () => {
 };
 
 export const login = (user) => async (dispatch) => {
-  const { credential, password } = user;
+  const { email, password } = user;
   const response = await csrfFetch('/api/session', {
     method: 'POST',
     body: JSON.stringify({
-      credential,
+      email,
       password
     })
   });
   const data = await response.json();
   dispatch(setCurrentUser(data.user));
   return response;
+};
+
+export const restoreSession = () => async dispatch => {
+    const response = await csrfFetch("/api/session");
+    storeCSRFToken(response);
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
 };
 
 const initialState = { user: null };
