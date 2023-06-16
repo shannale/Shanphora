@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^5.3.4",
+    "redux": "^4.2.1"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
+}
