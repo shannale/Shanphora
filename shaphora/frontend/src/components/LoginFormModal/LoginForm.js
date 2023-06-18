@@ -28,33 +28,38 @@ function LoginForm() {
   };
 
   return (
-    <>
-      <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="signup-modal-container">
+
+      <h1 className="modal-title">Sign In</h1>
+      <br /> 
+      <h3> Sign in or create an account to enjoy FREE standard shipping on all orders. </h3>
+      <div className="name-input">
+      <form className="signup-form" onSubmit={handleSubmit}>
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <label>
-            Email
-          <input
+        <label className="box-name "> 
+          <input className="text-input"
             type="text"
+            placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
-        <label>
-          Password
-          <input
+        <label className="box-name ">
+          <input className="text-input"
             type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button className="signup-button" type="submit">Sign In</button>
       </form>
-    </>
+      </div>
+    </div>
   );
 }
 

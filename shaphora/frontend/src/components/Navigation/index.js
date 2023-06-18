@@ -18,18 +18,20 @@ function Navigation(){
     sessionLinks = (
       <>
         <LoginFormModal />
-        {/* <NavLink to="/signup">Sign Up</NavLink> */}
+        <SignupFormModal />
       </>
     );
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-        {sessionLinks}
-      </li>
-    </ul>
+    <div className="nav-container"> 
+
+        <ul>
+            <NavLink className="home-title" exact={true} to="/">S H A P H O R A</NavLink>
+            {sessionLinks}
+        </ul>
+      
+    </div>
   );
 }
 

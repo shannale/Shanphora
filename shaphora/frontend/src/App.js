@@ -9,7 +9,6 @@ function App() {
       <Navigation />
         <Switch>
           <Route path="/signup">
-            <SignupFormModal />
           </Route>
         </Switch>
     </>
