@@ -6,6 +6,9 @@ import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
 import './Navigation.css';
+import { BsSuitHeart } from 'react-icons/bs';
+import { BsBasket3 } from 'react-icons/bs';
+import { BsPersonHearts } from 'react-icons/bs';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -37,9 +40,21 @@ function Navigation() {
                             <SearchBar />
                           </div>
 
+                          <div className="heart-icon">
+                             <BsPersonHearts />
+                          </div>
+
                           <div className="signin">
                             <LoginFormModal />
                             <SignupFormModal />
+                          </div>
+
+                          <div className="heart-icon">
+                            <BsSuitHeart />
+                          </div>
+
+                          <div className="heart-icon">
+                            <BsBasket3 />
                           </div>
                     </div>
 
@@ -47,11 +62,17 @@ function Navigation() {
           </div>
         </nav>
       </div>
+
+      <div className="category-bar">
+      </div>
     </>
   );
 }
 
 export default Navigation;
+
+
+
 
 
 
