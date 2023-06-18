@@ -1,7 +1,6 @@
 .home-title {
     padding-right: 2em;
     padding-left: 4em;
-    padding-top: 10em;
     text-decoration: none;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
@@ -12,8 +11,8 @@
     background-color: rgb(192, 220, 241);
     min-height: 48px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
     width: 100%;
 }
   
@@ -26,5 +25,26 @@
 .home-link {
     padding: 30px;
     font-size: x-large;
-
 }
+
+.home-links-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-bar,
+.signin {
+  margin-left: 200px;
+  margin-top: -1.65%;
+}
+
+.search-bar {
+    padding-left: -50%;
+}
+
+
+
+
+
+ 

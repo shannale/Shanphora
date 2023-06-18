@@ -1,15 +1,15 @@
-.search-bar {
+/* .search-bar {
     background-color: #f6f6f8;
     border-radius: 9999px;
-    width: 450px;
-} 
+    width: 100px;
+}  */
   
 .search-input {
     z-index: 2;
     font-size: 15px;
     background-color: transparent;
     box-shadow: none;
-    width: 450px;
+    width: 400px;
     border-radius: 9999px;
     padding: 10px 12px 10px 36px;
     display: flex;
