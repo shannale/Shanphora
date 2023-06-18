@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import SearchBar from '../SearchBar';
 import './Navigation.css';
 
 function Navigation(){
@@ -14,24 +15,38 @@ function Navigation(){
     sessionLinks = (
       <ProfileButton user={sessionUser} />
     );
-  } else {
-    sessionLinks = (
-      <>
-        <LoginFormModal />
-        <SignupFormModal />
-      </>
-    );
-  }
+  } 
 
   return (
-    <div className="nav-container"> 
+    <>
+        <div className="nav-bar"> 
+            <nav> 
+                  <div className="top-line"> 
+                      <span className="top-line-text"> 
+                          Get FREE shipping on all orders when you join Beauty Insider. Exclusions/terms apply.† &nbsp;
+                          <strong className="bold-words">LEARN MORE</strong>
+                      </span>
+                  </div>
 
-        <ul>
-            <NavLink className="home-title" exact={true} to="/">S H A P H O R A</NavLink>
-            {sessionLinks}
-        </ul>
-      
-    </div>
+                  <div className="home-link"> 
+                      <NavLink className="home-title" exact={true} to="/">S H A P H O R A</NavLink>
+                      {sessionLinks}
+                  </div> 
+
+                  <div className='search-bar'> <SearchBar /> </div>
+
+                  <div className='signin'> <LoginFormModal /> </div>
+
+                  <div className='signup'> <SignupFormModal /> </div>
+            </nav>
+
+        </div>
+
+
+    </>
+  
+
+
   );
 }
 

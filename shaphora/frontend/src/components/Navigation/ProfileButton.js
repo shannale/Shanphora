@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import SignupFormModal from "../SignupFormModal";
+import LoginFormModal from "../LoginFormModal";
+import { Modal } from '../../context/Modal';
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
+
+
+  const sessionUser = useSelector(state => state.session.user);
   
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
   };
-  
+
   useEffect(() => {
     if (!showMenu) return;
 
@@ -46,3 +52,4 @@ function ProfileButton({ user }) {
 }
 
 export default ProfileButton;
+

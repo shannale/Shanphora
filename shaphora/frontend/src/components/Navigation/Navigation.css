@@ -1,6 +1,5 @@
 .home-title {
     padding-right: 2em;
-    width: 150px;
     padding-left: 4em;
     padding-top: 10em;
     text-decoration: none;
@@ -8,7 +7,24 @@
     color: black;
 }
 
-/* .nav-container {
-    border: 1px solid rgb(9, 2, 2); 
-    height: 100vh;
-} */
+
+.top-line {
+    background-color: rgb(192, 220, 241);
+    min-height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+  
+.top-line-text {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.home-link {
+    padding: 30px;
+    font-size: x-large;
+
+}

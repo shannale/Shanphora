@@ -28,18 +28,19 @@ function LoginForm() {
   };
 
   return (
-    <div className="signup-modal-container">
-
-      <h1 className="modal-title">Sign In</h1>
-      <br /> 
-      <h3> Sign in or create an account to enjoy FREE standard shipping on all orders. </h3>
-      <div className="name-input">
-      <form className="signup-form" onSubmit={handleSubmit}>
+    <>
+    <div className="signup-modal-container"> 
+        <h1 className="modal-title bold-words">Sign In</h1>
+        <br /> 
+        <h4 className="modal-message" > Sign in or create an account to enjoy <strong className="bold-words"> FREE standard shipping </strong> on all orders. </h4>
+        <br />
+      <form onSubmit={handleSubmit}>
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <label className="box-name "> 
-          <input className="text-input"
+
+        <label className="box-name">
+          <input className="name-input"
             type="text"
             placeholder="Email Address"
             value={email}
@@ -47,8 +48,8 @@ function LoginForm() {
             required
           />
         </label>
-        <label className="box-name ">
-          <input className="text-input"
+        <label className="box-name">
+          <input className="name-input"
             type="password"
             placeholder="Password"
             value={password}
@@ -56,10 +57,12 @@ function LoginForm() {
             required
           />
         </label>
+  
+  
         <button className="signup-button" type="submit">Sign In</button>
       </form>
       </div>
-    </div>
+    </>
   );
 }
 

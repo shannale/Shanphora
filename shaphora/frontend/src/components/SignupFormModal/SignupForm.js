@@ -40,67 +40,67 @@ function SignupForm(){
     return (
         <div className="signup-modal-container">
             <form onSubmit={handleSubmit} className="signup-form">
-                <h2 className="modal-title"> Create an Account </h2>
-                <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-                </ul>
-                <hr></hr>
+                <h1 className="modal-title bold-words center-words"> Create an Account </h1>
+                    <ul>
+                    {errors.map(error => <li key={error}>{error}</li>)}
+                    </ul>
+                <hr className="modal-line"></hr>
 
                 {/* <img src="/pictures/beauty-insider-logo.png" alt="Beauty Insider" class="css-1g5g0po eanm77i0" data-comp="Image StyledComponent BaseComponent "></img> */}
-                <h3> Join the Beauty Insider loyalty program. Earn points, get FREE standard shipping, redeem rewards, and more.</h3>
-                <br />
-                <div className="name-input">
-                <label className="box-name ">
+                <h4 className="modal-message"> Join the Beauty Insider loyalty program. Earn points, get <strong className="bold-words"> FREE standard shipping</strong>, redeem rewards, and more.</h4>
+                <br></br>
+            <div className="first-line">
+                <label className="box-name">
                 <input className="name-input"
                     type="text"
                     placeholder="First Name"
                     value={firstName}
                     onChange={(e) => setfirstName(e.target.value)}
                     required
-                />
+                    />
                 
                 </label>
                 <br />
-                <label>
+                <label className ="box-name">
                 <input className="name-input"
                     type="text"
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setlastName(e.target.value)}
                     required
-                />
+                    />
                 </label>
-                </div>
+              </div>
                 <br />
                 <label className="box-name ">
-                <input className="text-input"
+                <input className="name-input"
                     type="text"
                     placeholder="Email Address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                />
+                    />
                 </label>
                 
                 <br />
                 <label className="box-name ">
-                <input className="text-input"
+                <input className="name-input"
                     type="password"
                     placeholder="Password (6 to 12 characters)"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                />
+                    />
                 </label>
                 <br />
                 <label className="box-name">
-                <input className="text-input"
+                <input className="name-input"
                     type="password"
                     placeholder="Confirm Password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
-                />
+                    />
                 </label >
                 <br />
                 <button type="submit" className="signup-button">Join Now</button>
