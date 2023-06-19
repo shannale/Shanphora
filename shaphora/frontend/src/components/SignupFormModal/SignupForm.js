@@ -49,6 +49,8 @@ function SignupForm(){
                     </ul>
                 <hr className="modal-line"></hr>
 
+                
+
                 {/* <img src="/pictures/beauty-insider-logo.png" alt="Beauty Insider" class="css-1g5g0po eanm77i0" data-comp="Image StyledComponent BaseComponent "></img> */}
                 <h4 className="modal-message"> Join the Beauty Insider loyalty program. Earn points, get <strong className="bold-words"> FREE standard shipping</strong>, redeem rewards, and more.</h4>
                 <br></br>

@@ -9,6 +9,7 @@ import './Navigation.css';
 import { BsSuitHeart } from 'react-icons/bs';
 import { BsBasket3 } from 'react-icons/bs';
 import { BsPersonHearts } from 'react-icons/bs';
+import UserDropDown from './UserDropdown';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -49,8 +50,8 @@ function Navigation() {
                           </div>
 
                           <div className="signin">
-                            <LoginFormModal />
-                            <SignupFormModal />
+                            <UserDropDown />
+              
                           </div>
 
                           <div className="heart-icon">

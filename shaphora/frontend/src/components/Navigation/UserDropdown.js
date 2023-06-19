@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
-import * as sessionActions from '../../store/session';
+// import * as sessionActions from '../../store/session';
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
-import { logout } from "../../store/session";
+import './Navigation.css';
+
 
 function UserDropDown() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function UserDropDown() {
     if (!showMenu) return;
 
     const closeMenu = () => {
+        console.log("UserDropdown: closeMenu()")
       setShowMenu(false);
     };
 
@@ -26,29 +28,22 @@ function UserDropDown() {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
-  const handleLogin = (e) => {
-    dispatch(logout());
-  };
-
-  const handleSignup = () => {
-    dispatch(logout());
-  };
 
   return (
     <>
       <button onClick={openMenu}>
         <i className="fa-solid fa-user-circle" />
       </button>
-      {showMenu && (
+      <div className={!showMenu ? "hidden" : null}> 
         <ul className="profile-dropdown">
-          <li>
-            <button onClick={handleLogin}>Login</button>
+          <li className="login-button">
+                <LoginFormModal />
           </li>
-          <li>
-            <button onClick={handleSignup}>Sign Up</button>
+          <li className="signup-button">
+                <SignupFormModal />
           </li>
         </ul>
-      )}
+      </div>
     </>
   );
 }
