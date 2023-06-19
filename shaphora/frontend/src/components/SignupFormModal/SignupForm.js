@@ -34,8 +34,11 @@ function SignupForm(){
       }
       return setErrors(['Confirm Password field must be the same as the Password field']);
     };
-
     
+    
+    if (user) {
+    return <Redirect to='/' />;
+    }
   
     return (
         <div className="signup-modal-container">
@@ -109,9 +112,6 @@ function SignupForm(){
        </div> 
     );
 
-    if (user) {
-		return <Redirect to='/' />;
-	}
 
 
 }

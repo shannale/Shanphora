@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
+import { CiSearch } from 'react-icons/ci';
 
 const SearchBar = () => {
 	const [searchQuery, setSearchQuery] = useState('');

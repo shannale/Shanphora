@@ -44,6 +44,10 @@ function Navigation() {
                              <BsPersonHearts />
                           </div>
 
+                          <div className="community">
+                             Community
+                          </div>
+
                           <div className="signin">
                             <LoginFormModal />
                             <SignupFormModal />
@@ -64,6 +68,50 @@ function Navigation() {
       </div>
 
       <div className="category-bar">
+          <ul className="categories">
+              <li>
+                <a className="category-names"> </a>
+              </li>
+              <li>
+                <a className="category-names"> New </a>
+              </li>
+              <li>
+                <a className="category-names"> Brands </a>
+              </li>
+              <li>
+                <a className="category-names"> Makeup </a>
+              </li>
+              <li>
+                <a className="category-names"> Skincare </a>
+              </li>
+              <li>
+                <a className="category-names"> Hair </a>
+              </li>
+              <li>
+                <a className="category-names"> Fragrance </a>
+              </li>
+              <li>
+                <a className="category-names"> Tools&nbsp;&&nbsp;Brushes </a>
+              </li>
+              <li>
+                <a className="category-names"> Bath&nbsp;&&nbsp;Body</a>
+              </li>
+              <li>
+                <a className="category-names"> Mini&nbsp;Size</a>
+              </li>
+              <li>
+                <a className="category-names"> Gifts </a>
+              </li>
+              <li>
+                <a className="category-names"> Beauty&nbsp;Under&nbsp;$20 </a>
+              </li>
+              <li>
+                <a className="category-names"> Sales&nbsp;&&nbsp;Offers </a>
+              </li>
+              <li>
+                <a className="category-names"> Clean&nbsp;Beauty </a>
+              </li>
+          </ul>
       </div>
     </>
   );
