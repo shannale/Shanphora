@@ -41,6 +41,10 @@
   margin-top: -1.65%;
 }
 
+.signin {
+    margin-left: 30px;
+}
+
 .search-bar {
     padding-left: -50%;
 }
@@ -50,7 +54,6 @@
     /* min-height: 50px; */
     display: flex;
     width: 100%;
-
 }
 
 .profile-dropdown {
@@ -92,14 +95,22 @@
 }
 
 .community {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-size: 14px;
     margin-left: 30px;
     margin-bottom: -10px;
     margin-top: -30px;
-    font-weight: 325;
+    font-weight: 400;
 }
 
+
+.vl {
+    border-left: 0.1px solid rgb(220, 223, 233);
+    height: 40px;
+    margin-left: 30px;
+    margin-bottom: -10px;
+    margin-top: -30px;
+}
 
 .login-button button {
     font-size: 12px;
@@ -161,12 +172,14 @@
     padding-left: 1%;
     margin-top: 1%;
     width: 300px;
-    height: 300px;
+    height: 150px;
     background-color: white;
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
     /* align-items: center; */
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 6px;
+
 }
 
 .buttons {
@@ -176,10 +189,83 @@
     white-space: pre-line;
     /* margin-left: 5%; */
     align-items: center;
-    padding-top: 10%;
+    padding-top: 5%;
     justify-content: space-between;
 }
 
 .drop-message {
    padding: 4%;
+   padding-top: 6%;
+}
+
+.user-profile-img {
+    padding-top: 5px;
+
+}
+
+.button-box {
+    background-color: transparent;
+}
+
+.profile-signin-message {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.free-shipping-signin {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.profile-message-container {
+    line-height: 12px;
+    margin-bottom: -10px;
+    margin-top: -30px;
+}
+
+.logout-button {
+    font-size: 12px;
+    /* padding: 0.25em 0.875em; */
+    min-height: 32px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.2s ease 0s;
+    display: flex;
+    width: 140px;
+    height: 30px;
+    min-width: 5.5em;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+}
+
+.logout-dropdown {
+    padding-left: 1%;
+    margin-top: 1%;
+    width: 275px;
+    height: 125px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 160%;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 6px;
+
+}
+
+.user-message {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    line-height: 300%;
+    font-size: 20px;
+    margin-bottom: -5%;
 }

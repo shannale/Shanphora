@@ -17,6 +17,8 @@ function Navigation() {
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = <ProfileButton user={sessionUser} />;
+  } else {
+    sessionLinks = <UserDropDown />
   }
 
   return (
@@ -36,9 +38,15 @@ function Navigation() {
                       S H A P H O R A
                     </NavLink>
                     <div className="home-links-container">
-                      {sessionLinks}
+                      {/* {sessionLinks} */}
                           <div className="search-bar">
                             <SearchBar />
+                          </div>
+
+                          
+
+                          <div className="heart-icon">
+                
                           </div>
 
                           <div className="heart-icon">
@@ -49,9 +57,21 @@ function Navigation() {
                              Community
                           </div>
 
+                          <div class="vl"></div>
+
                           <div className="signin">
-                            <UserDropDown />
-              
+                              {sessionLinks}
+                          </div>
+
+                          <div className="profile-message-container">
+                              <div className='profile-signin-message'>
+                                  Be Logged In
+                                  <br></br>
+                                  <div className="free-shipping-signin">
+                                      to SHOP Shapora
+                                  </div>
+                              </div>
+
                           </div>
 
                           <div className="heart-icon">
@@ -61,6 +81,8 @@ function Navigation() {
                           <div className="heart-icon">
                             <BsBasket3 />
                           </div>
+
+                      
                     </div>
 
             </div>
