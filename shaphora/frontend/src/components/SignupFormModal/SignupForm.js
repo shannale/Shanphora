@@ -109,6 +109,9 @@ function SignupForm(){
                 </label >
                 <br />
                 <button type="submit" className="signup-button">Join Now</button>
+
+                <h5 className="end-message"> By clicking "Join Now" you acknowledge that you are cool person and have read Shaphora's Privacy Policy and Notice of Financial Incentive, agree to TERMS OF USE and BEAUTY INSIDER TERMS. </h5>
+
             </form>
 
        </div> 

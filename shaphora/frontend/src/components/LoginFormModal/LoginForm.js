@@ -60,7 +60,11 @@ function LoginForm() {
   
   
         <button className="signup-button" type="submit">Sign In</button>
+
+        <h5 className="end-message"> By clicking "Sign In" you agree to the current version of our TERMS OF USE, and have read Shaphora's privacy policy, have fun browsing through Shaphora :3 </h5>
+
       </form>
+
       </div>
     </>
   );
