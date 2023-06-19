@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
-// import * as sessionActions from '../../store/session';
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
 import './Navigation.css';
+import { CgProfile } from "react-icons/cg"
 
 
 function UserDropDown() {
-  const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
     
   const openMenu = () => {
@@ -32,16 +30,23 @@ function UserDropDown() {
   return (
     <>
       <button onClick={openMenu}>
-        <i className="fa-solid fa-user-circle" />
+        {/* <i className="fa-solid fa-user-circle" /> */}
+        <CgProfile />
       </button>
       <div className={!showMenu ? "hidden" : null}> 
-        <ul className="profile-dropdown">
-          <li className="login-button">
-                <LoginFormModal />
-          </li>
-          <li className="signup-button">
-                <SignupFormModal />
-          </li>
+        <ul className="profile-dropdown user-dropdown">
+            <h1 className="drop-message"> Have a great day, Beautiful 
+                <div className="buttons">
+                    <li className="login-button">
+                            <LoginFormModal />
+                    </li>
+                    <li className="sign-up">
+                            <SignupFormModal />
+                    </li>
+
+                </div>
+
+            </h1>
         </ul>
       </div>
     </>
