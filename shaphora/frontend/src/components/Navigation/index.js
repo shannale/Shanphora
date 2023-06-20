@@ -2,8 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-import LoginFormModal from '../LoginFormModal';
-import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
 import './Navigation.css';
 import { BsSuitHeart } from 'react-icons/bs';
@@ -136,6 +134,8 @@ function Navigation() {
               </li>
           </ul>
       </div>
+
+
     </>
   );
 }

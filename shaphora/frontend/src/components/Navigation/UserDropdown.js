@@ -18,7 +18,6 @@ function UserDropDown() {
     if (!showMenu) return;
 
     const closeMenu = () => {
-        console.log("UserDropdown: closeMenu()")
       setShowMenu(false);
     };
 

@@ -1,15 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SignupFormModal from "./components/SignupFormModal";
 import Navigation from "./components/Navigation";
+import { SplashPage } from "./components/SplashPage";
 
 function App() {
   return (
     <>
       <Navigation />
+        <SplashPage />
         <Switch>
-          <Route path="/signup">
-          </Route>
         </Switch>
     </>
   );
