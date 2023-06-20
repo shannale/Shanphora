@@ -27,6 +27,11 @@ function LoginForm() {
       });
   };
 
+  const handleDemoSignIn = async () => {
+    dispatch(sessionActions.login({ email: "demo@user.io" , password: "password" }))
+  };
+
+
   return (
     <>
     <div className="signup-modal-container"> 
@@ -60,6 +65,12 @@ function LoginForm() {
   
   
         <button className="signup-button" type="submit">Sign In</button>
+
+  
+        <button className="demo-login-button" onClick={handleDemoSignIn}>
+                <span>Sign In With Demo </span>
+        </button>
+
 
         <h5 className="end-message"> By clicking "Sign In" you agree to the current version of our TERMS OF USE, and have read Shaphora's privacy policy, have fun browsing through Shaphora :3 </h5>
 

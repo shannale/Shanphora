@@ -269,3 +269,96 @@
     font-size: 20px;
     margin-bottom: -5%;
 }
+
+.demo-login-button {
+    font-size: 13.5px;
+    /* padding: 0.25em 0.875em; */
+    min-height: 32px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(0, 0, 0);
+    border-color: black;
+    transition: color 0.2s ease 0s, border-color 0.2s ease 0s;
+    display: flex;
+    width: 205px;
+    height: 45px;
+    min-width: 5.5em;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.wrapper {
+    position: relative;
+}
+#left-arrow {
+    z-index: 999;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 46px;
+    background: white;
+    border-radius: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
+#right-arrow {
+    z-index: 999;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 46px;
+    background: rgb(255, 254, 254);
+    border-radius: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+}
+
+.wrapper .carousel {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    cursor: pointer;
+    font-size: 0px;
+    width: 100%;
+}
+
+.carousel img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 12px;
+    width: calc(100% /3);
+
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 900px){
+    .carousel img {
+        width: calc(100% /2);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .carousel img{
+        width: 100%;
+    }
+}
