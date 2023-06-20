@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: shaphora_production
   username: shaphora
   password: <%= ENV["SHAPHORA_DATABASE_PASSWORD"] %>
