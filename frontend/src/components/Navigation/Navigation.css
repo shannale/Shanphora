@@ -344,6 +344,7 @@
     object-fit: cover;
     margin-left: 12px;
     width: calc(100% /3);
+    user-select: none;
 
 }
 

@@ -41,6 +41,12 @@ export const SplashPage = () => {
                 <img src={image1} alt="img"></img>
                 <img src={image6} alt="img"></img>
                 <img src={image7} alt="img"></img>
+                <img src={image4} alt="img"></img>
+                <img src={image3} alt="img"></img>
+                <img src={image2} alt="img"></img>
+                <img src={image1} alt="img"></img>
+                <img src={image6} alt="img"></img>
+                <img src={image7} alt="img"></img>
 
             </div>
 
