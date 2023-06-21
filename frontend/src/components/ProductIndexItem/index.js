@@ -7,7 +7,7 @@ const ProductIndexItem = ({ product }) => {
             <>
             <div>
                     <p>
-                        <img src={product.images} className="product-image-index"/>
+                        <img src={product.photoUrl} className="product-image-index"/>
                         <div>
                             {product.name}
                         </div>

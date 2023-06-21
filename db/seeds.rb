@@ -37,7 +37,7 @@ ApplicationRecord.transaction do
     end
 
     Product.create!(
-      name: 'Soft Pinch Tinted Lip Oil', 
+      name: 'Soft Pinch Tinted Lip', 
       brand: 'Rare Beauty by Selena Gomez',
       description: 'An innovative gel-to-oil formula that starts glossy and leaves lips tinted while staying comfortable--never sticky--all day.',
       category: 'Lips',
