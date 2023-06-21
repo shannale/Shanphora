@@ -6,6 +6,7 @@
 #  brand       :string           not null
 #  category    :string           not null
 #  description :text             not null
+#  images      :string
 #  name        :string           not null
 #  price       :integer          not null
 #  created_at  :datetime         not null

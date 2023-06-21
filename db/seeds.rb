@@ -11,6 +11,7 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
+    Product.destroy_all
   
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
@@ -36,11 +37,12 @@ ApplicationRecord.transaction do
     end
 
     Product.create!(
-      name: 'Thomas Skin', 
-      brand: 'Nitty',
-      description: 'The people watching me suffer rn',
-      category: 'Skincare',
-      price: 10,
+      name: 'Soft Pinch Tinted Lip Oil', 
+      brand: 'Rare Beauty by Selena Gomez',
+      description: 'An innovative gel-to-oil formula that starts glossy and leaves lips tinted while staying comfortable--never sticky--all day.',
+      category: 'Lips',
+      price: 20,
+      images: "https://www.sephora.com/productimages/sku/s2640159-main-zoom.jpg?imwidth=250"
     )
   
     puts "Done!"

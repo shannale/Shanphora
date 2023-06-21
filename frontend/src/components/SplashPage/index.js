@@ -35,18 +35,79 @@ export const SplashPage = () => {
             <div className="carousel" style={{
             transform: `translateX(-${slideIndex * 100}%)`,
             transition: "transform 0.5s ease-in-out"}}>
-                <img src={image4} alt="img"></img>
-                <img src={image3} alt="img"></img>
-                <img src={image2} alt="img"></img>
-                <img src={image1} alt="img"></img>
-                <img src={image6} alt="img"></img>
-                <img src={image7} alt="img"></img>
-                <img src={image4} alt="img"></img>
-                <img src={image3} alt="img"></img>
-                <img src={image2} alt="img"></img>
-                <img src={image1} alt="img"></img>
-                <img src={image6} alt="img"></img>
-                <img src={image7} alt="img"></img>
+                <div className="image-div">
+                    <img src={image4} alt="img"></img>
+                    <div className="image-des1">
+                        <div className="des-main">
+                            Must-Have Minis
+                        </div>
+                        <div className="des-below">
+                            Can't miss beauty at great values.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-div">
+                    <img src={image3} alt="img"></img>
+                    <div className="image-des2">
+                        <div className="des-main">
+                            Ultra-Hydrating SPF
+                        </div>
+                        <div className="des-below">
+                            The ultimate skincare must-have.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-div">
+                    <img src={image2} alt="img"></img>
+                    <div className="image-des3">
+                        <div className="des-main">
+                            NEW Isle of Paradise Body Care 
+                        </div>
+                        <div className="des-below">
+                            Clease, exfoliate, and moisturize with skincare-powered formulas.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-div">
+                    <img src={image1} alt="img"></img>
+                    <div className="image-des4">
+                        <div className="des-main">
+                            This Just In
+                        </div>
+                        <div className="des-below">
+                            The latest beauty from the hottest brands.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-div">
+                    <img src={image6} alt="img"></img>
+                    <div className="image-des5">
+                        <div className="des-main">
+                            Sunscreen under $25
+                        </div>
+                        <div className="des-below">
+                            Hydrating formulas that boost glow too.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className="image-div">
+                    <img src={image7} alt="img"></img>
+                    <div className="image-des6">
+                        <div className="des-main">
+                            Just In: Strawberry Shortcake Clean Cleansing Balm
+                        </div>
+                        <div className="des-below">
+                            Farmacy's bestselling, makeup-melting Green Clean formula in a delicious, new scent. Only at Sephora.
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
 
