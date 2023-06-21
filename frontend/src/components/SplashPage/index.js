@@ -15,13 +15,13 @@ export const SplashPage = () => {
 
     const handleNextSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % imageCount);
-      };
+    };
     
     const handlePrevSlide = () => {
         setSlideIndex((prevIndex) =>
           prevIndex === 0 ? imageCount - 1 : prevIndex - 1
         );
-      };
+    };
     
     const imageCount = 6;
   
@@ -61,3 +61,4 @@ export const SplashPage = () => {
 
     )
 }
+

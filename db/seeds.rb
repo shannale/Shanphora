@@ -34,6 +34,15 @@ ApplicationRecord.transaction do
         password: 'password'
       }) 
     end
+
+    Product.create!(
+      name: 'Thomas Skin', 
+      brand: 'Nitty',
+      description: 'The people watching me suffer rn',
+      category: 'Skincare',
+      price: 10,
+    )
   
     puts "Done!"
+
   end

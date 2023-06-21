@@ -55,7 +55,7 @@ function Navigation() {
                              Community
                           </div>
 
-                          <div class="vl"></div>
+                          <div className="vl"></div>
 
                           <div className="signin">
                               {sessionLinks}
@@ -134,7 +134,6 @@ function Navigation() {
               </li>
           </ul>
       </div>
-
 
     </>
   );
