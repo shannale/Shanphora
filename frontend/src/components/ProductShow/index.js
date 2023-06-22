@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { fetchAllProducts } from "../../store/product";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { fetchProduct } from "../../store/product";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const ProductShow = () => {
   const product = useSelector((state) => state.products[productId]);
 
   useEffect(() => {
-    dispatch(fetchAllProducts(productId));
+    dispatch(fetchProduct(productId));
   }, [dispatch, productId]);
 
   if (product === undefined){

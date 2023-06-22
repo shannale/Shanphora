@@ -1,6 +1,8 @@
-json.product do 
+
+json.set! @product.id do 
     json.partial! 'api/products/product', product: @product
-    # photos go here
 end
+# photos go here
+
 
 #create reviews key
