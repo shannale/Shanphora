@@ -8,7 +8,6 @@ import { BsSuitHeart } from 'react-icons/bs';
 import { BsBasket3 } from 'react-icons/bs';
 import { BsPersonHearts } from 'react-icons/bs';
 import UserDropDown from './UserDropdown';
-import MakeupDropDown from '../MakeupDropDown';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);

@@ -1,9 +1,9 @@
 import { useEffect } from "react"; 
 import { useSelector, useDispatch} from "react-redux";
 import { fetchAllProducts } from "../../store/product";
-import ProductIndexItem from "../ProductIndexItem/index.js";
+import CategoryHomeIndex from "../CategoryHomeIndex";
 
-export const Products = () => {
+export const CategoryHome = () => {
     const products = useSelector((state) => Object.values(state.products));
     const dispatch = useDispatch();
 
@@ -14,17 +14,14 @@ export const Products = () => {
 
     return (
         <>
-        <div className="product-index">
-        <div className="index-title"> Makeup </div>
+        <div className="products-home">
+        <div className="index-title"> </div>
                 {products.map((product) => (
-                    <ProductIndexItem key={product.id} product={product} />
+                    <CategoryHomeIndex key={product.id} product={product} />
                 ))}
         </div>
         </>
     );
 };
 
-export default Products;
-
-
-
+export default CategoryHome;
