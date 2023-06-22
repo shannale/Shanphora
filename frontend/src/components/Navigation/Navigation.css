@@ -501,8 +501,8 @@
 }
 
 .product-image-index {
-    width: 250px;
-    height: 280px;
+    width: 240px;
+    height: 260px;
 }
 .product-index {
     display: flex;
@@ -510,25 +510,69 @@
     flex-wrap: wrap;
 }
 .product-index-brand {
-
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    /* font-weight: bold; */
+    color: black;
+    margin-bottom: 2%;
+    font-size: 14px;
+    font-weight: 850;
 }
 
 .product-index-name{
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 350;
+
 
 }
 .product-index-price {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 2%;
+
 }
 
-.product-name-show {
-
+.product-image-show {
+    width: 400px;
+    height: 400px;
+    margin: 10%;
 }
 
 .product-brand-show {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-top: 25%;
+    font-weight: bold;
+}
 
+.product-name-show {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-top: 1%;
+}
+
+.product-price-show {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-top: 5%;
+}
+
+.des-title-show {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-top: 10%;
+    font-weight: bold;
 }
 
 .product-description-show {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-top: 2%;
+}
 
+.product-show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3%;
 }
 
 .info-container { 
@@ -541,5 +585,39 @@
     font-weight: bold;
     font-size: 35px;
     margin-top: 5%;
-    margin-left: 2%;
+    margin-left: 3%;
 } 
+
+.show-title {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: -4%;
+} 
+
+.product-add {
+    margin-top: 15%;
+    font-size: 14px;
+    padding: 0.25em 1.125em 0.25em 58px;
+    min-height: 44px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.2s ease 0s;
+    background-color: rgb(207, 17, 44);
+    width: 100%;
+    min-width: 10.47em;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+}

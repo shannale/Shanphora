@@ -18,14 +18,31 @@ const ProductShow = () => {
     return null;
   };
 
-
   return (
-    <div>
-      <img src={product.photoUrl} alt={product.name} className="product-image-show" />
-      <div className="product-name-show">{product.name}</div>
-      <div className="product-brand-show">{product.brand}</div>
-      <div classNAme="product-description-show">{product.description}</div>
-    </div>
+    <>
+      <div className="show-title"> {product.category} </div>
+          <div className="product-show">
+            <img src={product.photoUrl} alt={product.name} className="product-image-show" />
+            <div className="show-product">
+                <div className="product-brand-show">{product.brand}</div>
+                <div></div>
+                <div className="product-name-show">{product.name}</div>
+                <div></div>
+                <div className="product-price-show">${product.price}.00</div>
+                <div className="des-title-show">About the Product</div>
+                <div className="product-description-show">{product.description}</div>
+
+                <div>
+                  <button className="product-add"> Add to Basket 
+                    <br></br>
+                      For Standard Shipping
+                  </button>
+                </div>
+            </div>
+
+      </div>
+
+    </>
   );
 };
 

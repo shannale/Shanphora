@@ -17,7 +17,7 @@ const ProductIndexItem = ({ product }) => {
                                     {product.name}
                                 </div>
                                 <div className="product-index-price">
-                                    {product.price}
+                                    ${product.price}.00
                                 </div>
                             </div>
                     </div>
