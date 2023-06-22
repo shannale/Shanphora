@@ -14,11 +14,14 @@ export const Products = () => {
 
 
     return (
+        <>
         <div className="product-index">
-            {products.map((product) => (
-                <ProductIndexItem key={product.id} product={product} />
-            ))}
+        <div className="index-title"> Makeup </div>
+                {products.map((product) => (
+                    <ProductIndexItem key={product.id} product={product} />
+                ))}
         </div>
+        </>
     );
 };
 

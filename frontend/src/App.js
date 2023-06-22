@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import { SplashPage } from "./components/SplashPage";
 import { Products } from "./components/Products";
 // import { BottomBar } from "./components/BottomBar";
+import ProductShow  from "./components/ProductShow/index.js"
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={SplashPage} />
         <Route exact path="/products/" component={Products} />
-        <Route exact path="/products/" component={Products} />
+        <Route exact path="/products/:productId" component={ProductShow} />
       </Switch>
       {/* <Route path="/" component={BottomBar} /> */}
     </>

@@ -489,3 +489,57 @@
     background-color: black;
 }
 
+.product-container {
+    /* padding: 40%; */
+    padding: 10%;
+    /* width: 600px; */
+    /* height: 500px; */
+    margin-left: 20%;
+    margin-top: 20%;
+    text-decoration: none;
+    margin-bottom: -40%;
+}
+
+.product-image-index {
+    width: 250px;
+    height: 280px;
+}
+.product-index {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-index-brand {
+
+}
+
+.product-index-name{
+
+}
+.product-index-price {
+}
+
+.product-name-show {
+
+}
+
+.product-brand-show {
+
+}
+
+.product-description-show {
+
+}
+
+.info-container { 
+    width: 220px; 
+    height: 100px;
+} 
+
+.index-title {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 5%;
+    margin-left: 2%;
+} 
