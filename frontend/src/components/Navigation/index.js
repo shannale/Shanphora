@@ -8,6 +8,7 @@ import { BsSuitHeart } from 'react-icons/bs';
 import { BsBasket3 } from 'react-icons/bs';
 import { BsPersonHearts } from 'react-icons/bs';
 import UserDropDown from './UserDropdown';
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -100,7 +101,7 @@ function Navigation() {
                 <a className="category-names"> Brands </a>
               </li>
               <li>
-                <a className="category-names"> Makeup </a>
+                <a className="category-names" href="/products/" > Makeup </a>
               </li>
               <li>
                 <a className="category-names"> Skincare </a>

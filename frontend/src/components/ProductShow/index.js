@@ -32,10 +32,15 @@ const ProductShow = () => {
                 <div className="des-title-show">About the Product</div>
                 <div className="product-description-show">{product.description}</div>
 
-                <div>
-                  <button className="product-add"> Add to Basket 
-                    <br></br>
-                      For Standard Shipping
+                <div className="product-showing">
+                  <button className="product-add"> 
+                    <div className="add-button-words">
+                      Add to Basket 
+                      <br />
+                      <div className="shipping-button-words">
+                        for Standard Shipping
+                      </div>
+                    </div>
                   </button>
                 </div>
             </div>
