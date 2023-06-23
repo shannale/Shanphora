@@ -26,10 +26,8 @@ export const fetchAllProducts = () => async (dispatch) => {
 
 export const fetchProduct = (productId) => async (dispatch) => {
     const response = await fetch(`/api/products/${productId}`)
-    debugger
     if (response.ok) {
         const product = await response.json()
-        debugger
         dispatch(receiveProduct(product[productId]))
     }
 };
@@ -38,7 +36,6 @@ export const fetchProduct = (productId) => async (dispatch) => {
 const productReducer = (state, action) => {
     Object.freeze(state);
     const nextState = {...state}
-    debugger
     switch(action.type) {
         case RECEIVE_PRODUCTS:
             return {...nextState, ...action.products};

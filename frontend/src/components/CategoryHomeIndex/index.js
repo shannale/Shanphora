@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const CategoryHomeIndex = ({ product }) => {
     return (
+        
+        <div className="home-prod-container">
         <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}>
             <>
             <div>
@@ -23,6 +25,8 @@ const CategoryHomeIndex = ({ product }) => {
                 </div>
             </>
         </Link>
+
+        </div>
     );
 };
 

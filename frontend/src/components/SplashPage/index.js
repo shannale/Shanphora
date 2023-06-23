@@ -7,6 +7,7 @@ import image7 from "./Images/slide7.jpg"
 import { VscChevronLeft } from "react-icons/vsc";
 import { VscChevronRight } from "react-icons/vsc";
 import { useState } from "react";
+import CategoryHome from "../CategoryHome"
 
 
 export const SplashPage = () => {
@@ -115,6 +116,13 @@ export const SplashPage = () => {
                 <VscChevronRight />
             </div>
 
+        </div>
+
+        <div className="cate-name">
+            Lips
+        </div>
+        <div>
+            <CategoryHome category={'Lips'}/>
         </div>
 
 

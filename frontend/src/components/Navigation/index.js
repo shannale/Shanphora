@@ -31,10 +31,15 @@ function Navigation() {
                     </span>
               </div>
 
+
               <div className="home-link">
+                <div className='home-link-title'>
                     <NavLink className="home-title" exact={true} to="/">
+                      <br />
                       S H A P H O R A
                     </NavLink>
+
+                </div>
                     <div className="home-links-container">
                       {/* {sessionLinks} */}
                           <div className="search-bar">

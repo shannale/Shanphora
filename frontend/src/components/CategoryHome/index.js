@@ -3,7 +3,7 @@ import { useSelector, useDispatch} from "react-redux";
 import { fetchAllProducts } from "../../store/product";
 import CategoryHomeIndex from "../CategoryHomeIndex";
 
-export const CategoryHome = () => {
+export const CategoryHome = ({category}) => {
     const products = useSelector((state) => Object.values(state.products));
     const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ export const CategoryHome = () => {
         <div className="products-home">
         <div className="index-title"> </div>
                 {products.map((product) => (
-                    <CategoryHomeIndex key={product.id} product={product} />
+                    product.category === category ? <CategoryHomeIndex key={product.id} product={product}/> : null
                 ))}
         </div>
         </>
