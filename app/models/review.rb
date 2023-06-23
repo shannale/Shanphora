@@ -5,6 +5,7 @@
 #  id         :bigint           not null, primary key
 #  comment    :text             not null
 #  rating     :integer          not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  product_id :bigint           not null
@@ -21,7 +22,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Review < ApplicationRecord
-    validates :user_id, :product_id, :rating, :comment, presence: true
+    validates :user_id, :product_id, :rating, :comment, :title, presence: true
     validates :comment, length: { minimum: 5 }
 
     belongs_to :user

@@ -1,8 +1,19 @@
-import { useSelector } from "react-redux";
 
-const ReviewShow = ({productId}) => {
-    const reviews = useSelector((state) => Object.values(state.reviews));
 
+const ReviewShow = ({review}) => {
+    return (
+        <>
+        <div>
+            {review.title}
+        </div>
+        <div>
+            {review.rating}
+        </div>
+        <div>
+            {review.comment}
+        </div>
+        </>
+    )
 };
 
 export default ReviewShow;

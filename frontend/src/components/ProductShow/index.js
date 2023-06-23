@@ -4,12 +4,14 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../../store/product";
-import ReviewShow from "../ReviewsShow";
+import ReviewIndex from "../ReviewIndex";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const product = useSelector((state) => state.products[productId]);
+  const reviews = useSelector((state) => Object.values(state.reviews)
+    || []);
 
   useEffect(() => {
     dispatch(fetchProduct(productId));
@@ -51,7 +53,9 @@ const ProductShow = () => {
       <div className="reviews-title">
         Ratings & Reviews
       </div>
-      <div>
+      <div className="reviews-index">
+        {reviews.length > 0 ? <ReviewIndex reviews={reviews} /> : null}
+        
       </div>
     </>
   );

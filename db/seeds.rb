@@ -240,5 +240,67 @@
       natasha_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye10.jpg")
       natasha_palette.photo.attach(io: natasha_palette_attachment, filename: 'natasha_palette')
 
+
+  reviews = [
+        ["Excellent choice!", "I absolutely adore this product! It has exceeded my expectations and has become an integral part of my daily life.", "5"],
+        ["Not up to par...", "I'm unimpressed with this product. It failed to deliver the promised results, and I believe it's overpriced for what it offers.", "2"],
+        ["Room for improvement", "This product is decent, but it doesn't stand out. It gets the job done, but there are superior options available in the market.", "3"],
+        ["Life-changing!", "Wow, this product is a game-changer! It has completely transformed my life. I can't imagine living without it now.", "5"],
+        ["Underwhelming", "I had high expectations for this product, but unfortunately, it fell short. It didn't live up to the hype and left me feeling dissatisfied.", "2"],
+        ["Incredible experience!", "This is hands down the finest product I've ever used! It delivers exceptional results and is worth every penny.", "5"],
+        ["Not my cup of tea", "I wouldn't recommend this product. It caused irritation and didn't provide the desired outcome.", "2"],
+        ["Pretty impressive!", "I'm pleasantly surprised by this product! It's reasonably priced, effective, and has become a must-have in my beauty routine.", "4"],
+        ["Average at best", "This product is just average. It fulfills its claims, but I expected more based on the reviews I read.", "3"],
+        ["Unbelievable!!!", "I'm completely blown away by this product! It has surpassed all my expectations, and I can't praise it enough.", "5"],
+        ["Not worth the hype", "I'm unimpressed with this product. It failed to deliver the promised results, and I believe it's overpriced for what it offers.", "2"],
+        ["It gets the job done", "This product is decent, but it doesn't excel. There are better options available in the market.", "3"],
+        ["I'm head over heels!", "The product exceeded my expectations. It is well-designed, durable, and performs flawlessly. Highly recommended!", "5"],
+        ["Are you serious?", "I'm disappointed with the product. It arrived damaged, and the quality is subpar. It's not worth the price.", "1"],
+        ["Where have you been all my life", "This is the best product I've ever purchased. It's versatile, user-friendly, and has significantly improved my daily routine.", "5"],
+        ["Just okay :/", "The product didn't meet my expectations. It lacks important features and feels cheaply made. I won't be buying it again.", "2"],
+        ["Surpassed my expectations", "I'm impressed with the product's performance. It's fast, efficient, and delivers outstanding results. Well worth the investment.", "5"],
+        ["A regrettable purchase", "I regret buying this product. It stopped working after a few uses, and the customer support was unhelpful. Stay away!", "2"],
+        ["Five stars all the way!!", "I love this product! It's stylish, functional, and enhances my productivity. Definitely a game-changer.", "5"],
+        ["Highly satisfied customer!", "The product arrived on time and in perfect condition. It's exactly as described and works like a charm.", "4"],
+        ["Not what I expected", "I'm unsatisfied with the product's quality. It feels flimsy and doesn't live up to its advertised features.", "2"],
+        ["Great value for money", "This product is a great value for the price. It performs exceptionally well and has become an integral part of my daily routine.", "5"],
+        ["Not for me", "The product didn't work as expected. It's unreliable and inconsistent. I wouldn't recommend it to others.", "2"],
+        ["Perfect as a gift", "I'm extremely happy with this purchase. The product is of high quality, and the customer service was excellent.", "5"],
+        ["Returning this immediately", "The product is a disappointment. It broke within days of use, and the manufacturer didn't provide adequate support.", "1"],
+        ["YES! It's amazing!", "This product is a game-changer. It has simplified my life and exceeded all my expectations. I can't imagine living without it.", "5"],
+        ["Elegant design", "The product's design is sleek and modern. It's a perfect blend of aesthetics and functionality. Highly recommended!", "5"],
+        ["Disappointing performance", "I'm not impressed with this product. It feels cheaply made, and its performance is lackluster.", "2"],
+        ["Outstanding", "This product is a must-have. It's intuitive, efficient, and has made my daily tasks much easier.", "5"],
+        ["Initial disappointment", "I'm disappointed with this product. It arrived late, and the packaging was damaged. Not a good first impression.", "2"],
+        ["Average performance", "I'm underwhelmed by the product's performance. It's not as effective as I had hoped and feels overpriced.", "3"],
+        ["I'm in love!", "I can't imagine my life without this product. It has become an indispensable tool that I rely on every day.", "5"],
+        ["Unimpressive", "The product didn't live up to the hype. It's mediocre at best and doesn't offer any standout features.", "2"],
+        ["Impressively bold!", "I'm thoroughly impressed with this product. It's well-crafted, reliable, and delivers exceptional results.", "5"],
+        ["Still waiting for resolution", "The product arrived missing pieces, and the manufacturer has been unresponsive. Terrible customer service.", "1"],
+        ["Good performance!", "I'm satisfied with the product's performance. It does exactly what it claims and has improved my workflow.", "4"],
+        ["Not worth the money!", "This product is a letdown. It's poorly designed and doesn't work as advertised. Save your money.", "1"],
+        ["Highly versatile!", "I'm amazed by the product's versatility. It has exceeded my expectations and opened up new possibilities.", "5"],
+        ["Overpriced", "The product is overpriced for its quality. It feels cheaply made, and I expected better durability.", "3"],
+        ["Part of my daily routine!", "This product has transformed my routine. It's efficient, reliable, and has saved me a lot of time.", "5"],
+        ["Disappointed purchase", "I'm disappointed with this purchase. The product arrived damaged, and the customer support has been unhelpful.", "2"],
+        ["Highly satisfied!", "The product is a solid performer. It's reliable, user-friendly, and has become an integral part of my routine.", "4"]
+    ]
+
+    random_review = reviews.sample()
+    
+    all_users = User.all 
+    all_products = Product.all
+
+    all_users.each_with_index do |user, idx|
+      all_products.each_with_index do |product, idx2|
+        Review.create!({
+        title: random_review[0],
+        comment: random_review[1],
+        rating: random_review[2],
+        user_id: all_users[idx].id,
+        product_id: all_products[idx2].id
+      })
+      end
+    end
   
     puts "Done!"

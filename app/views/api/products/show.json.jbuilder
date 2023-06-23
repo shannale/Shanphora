@@ -11,4 +11,3 @@ json.reviews do
         end 
     end 
 end 
-#create reviews key
