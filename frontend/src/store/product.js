@@ -9,10 +9,11 @@ const receiveProducts = (products) => {
         products
     }
 }
-const receiveProduct = (product) => {
+const receiveProduct = (payload) => {
     return {
         type: RECEIVE_PRODUCT,
-        product
+        product: payload.product,
+        reviews: payload.reviews
     }
 }
 
@@ -27,8 +28,9 @@ export const fetchAllProducts = () => async (dispatch) => {
 export const fetchProduct = (productId) => async (dispatch) => {
     const response = await fetch(`/api/products/${productId}`)
     if (response.ok) {
-        const product = await response.json()
-        dispatch(receiveProduct(product[productId]))
+        const payload = await response.json()
+        console.log(payload)
+        dispatch(receiveProduct(payload))
     }
 };
 

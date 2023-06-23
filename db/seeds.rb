@@ -129,4 +129,116 @@
       )
       fenty_plump_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip10.jpg")
       fenty_plump.photo.attach(io: fenty_plump_attachment, filename: 'fenty_plump')
+
+    pat_lip = Product.create!(
+        name: 'SatinAllure™ Lipstick',
+        price: 30,
+        category: 'Lips',
+        brand: 'PAT McGRATH LABS',
+        description: 'A modernized, satin lipstick that veils lips in weightless, silky-smooth color with a luminous, dewy finish.'
+        )
+      pat_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip11.jpg")
+      pat_lip.photo.attach(io: pat_lip_attachment, filename: 'pat_lip')
+
+    mario_palette = Product.create!(
+        name: 'Master Mattes™ Eyeshadow Palette',
+        price: 50,
+        category: 'Eyes',
+        brand: 'MAKEUP BY MARIO',
+        description: 'A universal must-have matte palette formulated to be easily buildable so that it can go from natural to dramatic without causing fallout.'
+        )
+      mario_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye1.jpg")
+      mario_palette.photo.attach(io: mario_palette_attachment, filename: 'mario_palette')
+
+    sephora_palette = Product.create!(
+        name: 'Color Shifter Mini Eyeshadow Palette',
+        price: 10,
+        category: 'Eyes',
+        brand: 'SEPHORA COLLECTION',
+        description: 'A collection of highly pigmented mini eyeshadow palettes that offer up endless combinations of layered looks.'
+        )
+        sephora_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye2.jpg")
+        sephora_palette.photo.attach(io: sephora_palette_attachment, filename: 'sephora_palette')
+
+    kaja_palette = Product.create!(
+          name: 'Eye Bento Bouncy Eyeshadow Trio',
+          price: 26,
+          category: 'Eyes',
+          brand: 'Kaja',
+          description: 'A stacked, creamy, powder eyeshadow in curated trios of shimmers or combinations of matte and shimmer shades.'
+          )
+      kaja_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye3.jpg")
+      kaja_palette.photo.attach(io: kaja_palette_attachment, filename: 'kaja_palette')
+
+    tarte_palette = Product.create!(
+          name: 'Tartelette™ In Bloom Clay Eyeshadow Palette',
+          price: 45,
+          category: 'Eyes',
+          brand: 'tarte',
+          description: 'A universal must-have matte palette formulated to be easily buildable so that it can go from natural to dramatic without causing fallout.'
+          )
+      tarte_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye4.jpg")
+      tarte_palette.photo.attach(io: tarte_palette_attachment, filename: 'tarte_palette')
+
+      mini_tarte = Product.create!(
+          name: 'Mini tartelette™ fresh picked Amazonian clay eyeshadow palette',
+          price: 25,
+          category: 'Eyes',
+          brand: 'tarte',
+          description: 'A fresh and flirty pocket-size palette that is packed with everyday neutral shades that are anything but basic.'
+          )
+      mini_tarte_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye5.jpg")
+      mini_tarte.photo.attach(io: mini_tarte_attachment, filename: 'mini_tarte')
+
+      abh_palette = Product.create!(
+          name: 'Soft Glam Eyeshadow Palette',
+          price: 45,
+          category: 'Eyes',
+          brand: 'Anastasia Beverly Hills',
+          description: 'An everyday to night palette with 14 shades, including essential mattes and glam shimmer finishes.'
+          )
+      abh_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye6.jpg")
+      abh_palette.photo.attach(io: abh_palette_attachment, filename: 'abh_palette')
+
+      naked_palette = Product.create!(
+          name: 'Mini Naked3 Eyeshadow Palette',
+          price: 33,
+          category: 'Eyes',
+          brand: 'Urban Decay',
+          description: 'A mini vegan eyeshadow palette that is inspired by the fan-favorite Naked3 Palette and features six all-new universally flattering rosy-neutral eyeshadows.'
+          )
+      naked_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye7.jpg")
+      naked_palette.photo.attach(io: naked_palette_attachment, filename: 'naked_palette')
+
+      dior_backstage_palette = Product.create!(
+          name: 'BACKSTAGE Eyeshadow Palette',
+          price: 52,
+          category: 'Eyes',
+          brand: 'Dior',
+          description: 'An all-in-one eyeshadow and primer palette with one primer and eight blendable shades in matte and shimmer finishes.'
+          )
+      dior_backstage_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye8.jpg")
+      dior_backstage_palette.photo.attach(io: dior_backstage_palette_attachment, filename: 'dior_backstage_palette')
+
+      too_faced_palette = Product.create!(
+          name: 'Born This Way The Natural Nudes Eyeshadow Palette',
+          price: 52,
+          category: 'Eyes',
+          brand: 'Too Faced',
+          description: 'A palette of modern nude shades inspired by the beautiful nuances of real skin tones.'
+          )
+      too_faced_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye9.jpg")
+      too_faced_palette.photo.attach(io: too_faced_palette_attachment, filename: 'too_faced_palette')
+
+      natasha_palette = Product.create!(
+          name: 'Glam Eyeshadow Palette',
+          price: 69,
+          category: 'Eyes',
+          brand: 'Natasha Denona',
+          description: 'An everyday palette that creates super-dramatic smokey eyes as well as a variety of natural and extreme glam looks.'
+          )
+      natasha_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye10.jpg")
+      natasha_palette.photo.attach(io: natasha_palette_attachment, filename: 'natasha_palette')
+
+  
     puts "Done!"

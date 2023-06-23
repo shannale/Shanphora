@@ -507,30 +507,32 @@
     margin-top: 20%;
     text-decoration: none;
     margin-bottom: -40%;
+    /* margin-right: 50%; */
 }
 
 .product-image-index {
-    width: 240px;
-    height: 260px;
+    width: 200px;
+    height: 220px;
 }
 .product-index {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-right: 5%;
 }
 .product-index-brand {
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     /* font-weight: bold; */
     color: black;
     margin-bottom: 2%;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 850;
 }
 
 .product-index-name{
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 350;
 
 
@@ -545,8 +547,8 @@
 }
 
 .product-image-show {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
     margin: 10%;
 }
 
@@ -666,6 +668,7 @@
     flex-wrap: nowrap;
     width: 2000px;
     height: 100px;
+    margin-bottom: 15%;
 }
 
 .product-home-container {
@@ -678,11 +681,12 @@
     text-decoration: none;
     /* margin-bottom: -40%; */
     margin-right: 10%;
+    /* margin-bottom: 20%; */
 }
 
 .product-image-home {
     width: 140px;
-    height: 160px;
+    height: 150px;
 }
 
 .home-products-container {
@@ -717,7 +721,24 @@
 
 .home-prod-container {
     margin-top: 1%;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 6px;
-    width: 200px;
+    box-shadow: rgba(220, 204, 204, 0.2) 0px 0px 6px;
+    width: 220px;
     height: 260px;
+}
+
+.reviews-title {
+    border-top: 1px solid rgb(224, 220, 220);
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: bold;
+    margin-top: -5%;
+    margin-left: 4%;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.product-break-line {
+    /* height: 40px;
+    margin-left: 30px;
+    margin-bottom: -10px;
+    margin-top: -30px; */
 }

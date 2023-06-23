@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../../store/product";
+import ReviewShow from "../ReviewsShow";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -47,6 +48,11 @@ const ProductShow = () => {
 
       </div>
 
+      <div className="reviews-title">
+        Ratings & Reviews
+      </div>
+      <div>
+      </div>
     </>
   );
 };

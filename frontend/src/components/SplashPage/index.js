@@ -125,6 +125,13 @@ export const SplashPage = () => {
             <CategoryHome category={'Lips'}/>
         </div>
 
+        <div className="cate-name">
+            Eyes
+        </div>
+        <div>
+            <CategoryHome category={'Eyes'}/>
+        </div>
+        
 
         </>
 
