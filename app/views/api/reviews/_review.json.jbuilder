@@ -3,4 +3,5 @@ json.extract! review,
   :user_id,
   :product_id,
   :rating,
-  :comment
+  :comment,
+  :title

@@ -1,7 +1,8 @@
-import RECEIVE_PRODUCT from './product.js'
+
 
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 
+const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT'
 
 export const receiveReviews = (reviews) => ({
     type: RECEIVE_REVIEWS,
@@ -9,7 +10,11 @@ export const receiveReviews = (reviews) => ({
 });
 
 
+
 const reviewsReducer = (state = {}, action) => {
+    Object.freeze(state);
+    const nextState = {...state}
+    debugger
     switch (action.type) {
         case RECEIVE_REVIEWS:
             return { ...action.reviews };

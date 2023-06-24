@@ -10,6 +10,7 @@ const receiveProducts = (products) => {
     }
 }
 const receiveProduct = (payload) => {
+    console.log(payload)
     return {
         type: RECEIVE_PRODUCT,
         product: payload.product,
@@ -38,11 +39,12 @@ export const fetchProduct = (productId) => async (dispatch) => {
 const productReducer = (state, action) => {
     Object.freeze(state);
     const nextState = {...state}
+    debugger
     switch(action.type) {
         case RECEIVE_PRODUCTS:
             return {...nextState, ...action.products};
         case RECEIVE_PRODUCT:
-            return {...nextState, [action.product.id]: action.product};
+            return {...nextState, [action.product.id]: {...action.product, ['reviews']: {...action.reviews}}};
         default:
             return nextState;
     };

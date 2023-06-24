@@ -13,11 +13,14 @@
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
     Product.destroy_all
+    Review.destroy_all
+
   
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('products')
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
   
     puts "Creating users..."
     # Create one user
@@ -285,21 +288,21 @@
         ["Disappointed purchase", "I'm disappointed with this purchase. The product arrived damaged, and the customer support has been unhelpful.", "2"],
         ["Highly satisfied!", "The product is a solid performer. It's reliable, user-friendly, and has become an integral part of my routine.", "4"]
     ]
-
-    random_review = reviews.sample()
     
     all_users = User.all 
     all_products = Product.all
 
-    all_users.each_with_index do |user, idx|
-      all_products.each_with_index do |product, idx2|
+    all_users.each do |user|
+      all_products.each do |product|
+        random_review = reviews.sample()
+        
         Review.create!({
-        title: random_review[0],
-        comment: random_review[1],
-        rating: random_review[2],
-        user_id: all_users[idx].id,
-        product_id: all_products[idx2].id
-      })
+          title: random_review[0],
+          comment: random_review[1],
+          rating: random_review[2],
+          user_id: user.id,
+          product_id: product.id
+        })
       end
     end
   
