@@ -95,6 +95,13 @@
     margin-left: 1.2%;
     margin-right: 100%;
     cursor: pointer;
+    font-weight: normal;
+    transition: font-weight 0.3s, transform 0.3s;
+}
+  
+.categories li:hover {
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 .heart-icon {
@@ -212,12 +219,12 @@
 
 .user-profile-img {
     padding-top: 5px;
-    margin-left: 440%;
-
+    margin-left: 2%;
 }
 
 .button-box {
     background-color: transparent;
+    margin-left: 320%;
 }
 
 .profile-signin-message {
@@ -765,3 +772,4 @@
 .bounce {
     animation: bounce 0.5s;
 }
+
