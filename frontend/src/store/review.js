@@ -80,7 +80,7 @@ export const updateReview = (product, review) => async (dispatch) => {
 }; 
 
 export const deleteReview = (product, reviewId) => async (dispatch) => {
-    const response = await fetch(`/api/products/${product.id}/reviews/${reviewId}`, {
+    const response = await csrfFetch(`/api/products/${product.id}/reviews/${reviewId}`, {
         method: 'DELETE'
     }); 
 
@@ -99,11 +99,13 @@ const reviewsReducer = (state = {}, action) => {
         case RECEIVE_REVIEWS:
             return { ...action.reviews };
         case RECEIVE_REVIEW:
-            return { ...nextState, ...action.reviews};
+            nextState[action.reviews.id] = action.reviews
+            return { ...nextState};
         case RECEIVE_PRODUCT:
             return {...action.reviews};
         case REMOVE_REVIEW:
             delete nextState[action.reviewId]
+            return nextState;
         default:
             return state;
     }

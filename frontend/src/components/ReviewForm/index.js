@@ -21,7 +21,7 @@ export default function ReviewForm() {
             userId: currentUser.id,
             productId: productId,
             title: '',
-            rating: 3,
+            rating: 5,
             comment: '',
         };
     };
@@ -39,7 +39,7 @@ export default function ReviewForm() {
     const [comment, setComment] = useState(review ? review.comment : '');
 
     const handleSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
         const newReview = {
             ...review,

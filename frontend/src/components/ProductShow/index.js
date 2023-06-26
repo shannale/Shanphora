@@ -54,7 +54,7 @@ const ProductShow = () => {
         Ratings & Reviews
       </div>
       <div className="reviews-index">
-        {reviews ? <ReviewIndex reviews={reviews} /> : null} 
+        {reviews ? <ReviewIndex reviews={reviews} product={product} /> : null} 
       </div>
     </>
   );

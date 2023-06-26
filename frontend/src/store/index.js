@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     reviews: reviewsReducer
     
 });
-debugger
+
 let enhancer;
 
 if (process.env.NODE_ENV === 'production') {

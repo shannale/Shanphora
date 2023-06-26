@@ -28,21 +28,21 @@ function LoginForm() {
   };
 
   const handleDemoSignIn = async () => {
-      setTimeout(()=> {setEmail("d")}, 200);
-      setTimeout(()=> {setEmail("de")}, 400);
-      setTimeout(()=> {setEmail("dem")}, 600);
-      setTimeout(()=> {setEmail("demo")}, 800);
-      setTimeout(()=> {setEmail("demo@")}, 1000);
-      setTimeout(()=> {setEmail("demo@u")}, 1200);
-      setTimeout(()=> {setEmail("demo@us")}, 1400);
-      setTimeout(()=> {setEmail("demo@use")}, 1600);
-      setTimeout(()=> {setEmail("demo@user")}, 1800);
-      setTimeout(()=> {setEmail("demo@user.")}, 2000);
-      setTimeout(()=> {setEmail("demo@user.i")}, 2200);
-      setTimeout(()=> {setEmail("demo@user.io")}, 2400);
-      setTimeout( () => {
-      dispatch(sessionActions.login({ email: "demo@user.io" , password: "password" }))}, 2500)
-    // dispatch(sessionActions.login({ email: "demo@user.io" , password: "password" }))
+      // setTimeout(()=> {setEmail("d")}, 200);
+      // setTimeout(()=> {setEmail("de")}, 400);
+      // setTimeout(()=> {setEmail("dem")}, 600);
+      // setTimeout(()=> {setEmail("demo")}, 800);
+      // setTimeout(()=> {setEmail("demo@")}, 1000);
+      // setTimeout(()=> {setEmail("demo@u")}, 1200);
+      // setTimeout(()=> {setEmail("demo@us")}, 1400);
+      // setTimeout(()=> {setEmail("demo@use")}, 1600);
+      // setTimeout(()=> {setEmail("demo@user")}, 1800);
+      // setTimeout(()=> {setEmail("demo@user.")}, 2000);
+      // setTimeout(()=> {setEmail("demo@user.i")}, 2200);
+      // setTimeout(()=> {setEmail("demo@user.io")}, 2400);
+      // setTimeout( () => {
+      // dispatch(sessionActions.login({ email: "demo@user.io" , password: "password" }))}, 2500)
+    dispatch(sessionActions.login({ email: "demo@user.io" , password: "password" }))
   };
 
 

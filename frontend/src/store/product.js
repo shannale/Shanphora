@@ -40,7 +40,6 @@ export const fetchProduct = (productId) => async (dispatch) => {
 const productReducer = (state, action) => {
     Object.freeze(state);
     const nextState = {...state}
-    debugger
     switch(action.type) {
         case RECEIVE_PRODUCTS:
             return {...nextState, ...action.products};

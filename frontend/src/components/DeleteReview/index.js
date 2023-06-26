@@ -1,22 +1,19 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
-import { deleteReview } from '../../store/review';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteReview } from "../../store/review";
 
-const DeleteReview = () => {
-	const { reviewId } = useParams();
+const DeleteReview = ({ review }) => {
 	const dispatch = useDispatch();
-	const history = useHistory();
-	const currentProd = useSelector((state) => state.products.oneProduct);
-
-	const handleDelete = async () => {
-		await dispatch(deleteReview(reviewId));
-		history.push(`/products/${currentProd.id}`);
+  
+	const handleDelete = () => {
+	  dispatch(deleteReview(review.id));
 	};
+  
 	return (
-		<>
-			<button className='delete-review-button' onClick={handleDelete}>Remove Your Review</button>
-		</>
+	  <button onClick={handleDelete} className="delete-button">
+		Delete Review
+	  </button>
 	);
-};
-export default DeleteReview;
+  };
+  
+  export default DeleteReview;
