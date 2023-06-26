@@ -1,3 +1,5 @@
+import { receiveReviews } from "./review"
+
 // action types 
 const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS'
 const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT'
@@ -10,7 +12,6 @@ const receiveProducts = (products) => {
     }
 }
 const receiveProduct = (payload) => {
-    console.log(payload)
     return {
         type: RECEIVE_PRODUCT,
         product: payload.product,
@@ -30,8 +31,8 @@ export const fetchProduct = (productId) => async (dispatch) => {
     const response = await fetch(`/api/products/${productId}`)
     if (response.ok) {
         const payload = await response.json()
-        console.log(payload)
-        dispatch(receiveProduct(payload))
+        dispatch(receiveProduct(payload));
+        dispatch(receiveReviews(payload.reviews));
     }
 };
 

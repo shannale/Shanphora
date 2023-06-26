@@ -35,3 +35,9 @@
     padding-top: 20px;
     margin-bottom: 2%;
 }
+
+.review-user {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: gray;
+    font-size: 14px;
+}

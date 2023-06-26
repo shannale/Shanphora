@@ -1,3 +1,4 @@
+import csrfFetch from "./csrf";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW"; 
 export const REMOVE_REVIEW = "REMOVE_REVIEW"
@@ -37,7 +38,7 @@ export const fetchReviews = () => async (dispatch) => {
     };
 }; 
 
-export const fetchReview = () => async (dispatch) => {
+export const fetchReview = (reviewId) => async (dispatch) => {
     const response = await fetch(`/api/reviews/${reviewId}`);
 
     if (response.ok) {
@@ -46,8 +47,8 @@ export const fetchReview = () => async (dispatch) => {
     };
 };
 
-export const createPost = (review) => async (dispatch) => {
-    const response = await fetch('/api/reviews', {
+export const createReview = (productId, review) => async (dispatch) => {
+    const response = await csrfFetch(`/api/products/${productId}/reviews`, {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
@@ -62,8 +63,8 @@ export const createPost = (review) => async (dispatch) => {
 
 }; 
 
-export const updatePost = (review) => async (dispatch) => {
-    const response = await fetch(`/api/reviews/${review.id}`, {
+export const updateReview = (product, review) => async (dispatch) => {
+    const response = await csrfFetch(`/api/products/${product.id}/reviews/${review.id}`, {
         method: 'PATCH', 
         headers: {
             'Content-Type': 'application/json',
@@ -78,8 +79,8 @@ export const updatePost = (review) => async (dispatch) => {
 
 }; 
 
-export const deleteReview = (reviewId) => async (dispatch) => {
-    const response = await fetch(`/api/reviews/${reviewId}`, {
+export const deleteReview = (product, reviewId) => async (dispatch) => {
+    const response = await fetch(`/api/products/${product.id}/reviews/${reviewId}`, {
         method: 'DELETE'
     }); 
 
@@ -97,6 +98,8 @@ const reviewsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_REVIEWS:
             return { ...action.reviews };
+        case RECEIVE_REVIEW:
+            return { ...nextState, ...action.reviews};
         case RECEIVE_PRODUCT:
             return {...action.reviews};
         case REMOVE_REVIEW:

@@ -8,13 +8,16 @@ const ReviewShow = ({ review }) => {
   };
 
   return (
-    <div className="review-container">
-      <div className="review-title">{review.title}</div>
-      <div className="review-rating">
-            {renderStars()}
-      </div>
-      <div className="review-comment">{review.comment}</div>
-    </div>
+    <>
+        <div className="review-container">
+        <div className="review-title">{review.title}</div>
+        <div className="review-rating">
+                {renderStars()}
+        </div>
+        <div className="review-comment">{review.comment}</div>
+        <div className="review-user"> {review.user} {review.updated_at}</div>
+        </div>
+    </>
   );
 };
 
