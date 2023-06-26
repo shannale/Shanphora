@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getReview, fetchReview, createReview, updateReview } from '../../store/review';
+import { Redirect } from 'react-router-dom';
 import './ReviewForm.css'
 
 
@@ -12,6 +13,8 @@ export default function ReviewForm() {
     const dispatch = useDispatch();
 
     const currentUser = useSelector(state => state.session.user);
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     let review = useSelector(getReview(reviewId)); 
 
@@ -54,36 +57,44 @@ export default function ReviewForm() {
         } else {
             dispatch(updateReview(productId, newReview))
         }
+
+        setIsSubmitted(true);
     };
 
     return (
-        <form onSubmit={handleSubmit} className="review-form">
-            <h1 className='review-form-name'>{formType}</h1>
-            <label className='review-form-title'> Title:
-                <input className='title-box'
-                type="text"
-                value={title}
-                onChange={(e) => {setTitle(e.target.value)}}
-                />
-            </label>
-            <label className='review-form-rating'> Rating /5:
-                <input className='rating-box'
-                type="text"
-                value={rating}
-                onChange={(e) => {setRating(e.target.value)}}
-                />
-            </label>
-            <label className='review-form-comment'> Comment:
-                <input  className='comment-box'
-                type="textarea"
-                value={comment}
-                onChange={(e) => {setComment(e.target.value)}}
-                />
-            </label>
-            <div className='review-button-container'>
-                <button className='review-form-button'>Submit</button>
-            </div>
+        <>
+        {isSubmitted ? (
+      <Redirect to={`/products/${productId}/`}/>
+        ) : (
+            <form onSubmit={handleSubmit} className="review-form">
+                <h1 className='review-form-name'>{formType}</h1>
+                <label className='review-form-title'> Title:
+                    <input className='title-box'
+                    type="text"
+                    value={title}
+                    onChange={(e) => {setTitle(e.target.value)}}
+                    />
+                </label>
+                <label className='review-form-rating'> Rating /5:
+                    <input className='rating-box'
+                    type="text"
+                    value={rating}
+                    onChange={(e) => {setRating(e.target.value)}}
+                    />
+                </label>
+                <label className='review-form-comment'> Comment:
+                    <input  className='comment-box'
+                    type="textarea"
+                    value={comment}
+                    onChange={(e) => {setComment(e.target.value)}}
+                    />
+                </label>
+                <div className='review-button-container'>
+                    <button className='review-form-button'>Submit</button>
+                </div>
 
-        </form>
+            </form>
+        )}
+        </>
     )
 };
