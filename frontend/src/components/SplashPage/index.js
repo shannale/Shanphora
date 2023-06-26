@@ -118,14 +118,14 @@ export const SplashPage = () => {
 
         </div>
 
-        <div className="cate-name">
+        <div className="cate-name" id="lips-section">
             Lips
         </div>
         <div>
             <CategoryHome category={'Lips'}/>
         </div>
 
-        <div className="cate-name">
+        <div className="cate-name" id="eyes-section">
             Eyes
         </div>
         <div>

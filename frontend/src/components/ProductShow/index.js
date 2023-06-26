@@ -12,6 +12,7 @@ const ProductShow = () => {
   const product = useSelector((state) => state.products[productId]);
   const reviews = useSelector((state) => Object.values(state.reviews)
     || []);
+  
 
   useEffect(() => {
     dispatch(fetchProduct(productId));

@@ -6,9 +6,8 @@ import './ReviewForm.css'
 
 
 
-export default function ReviewForm() {
-    const { productId, reviewId } = useParams();
-    const formType = reviewId ? 'Update Review' : 'Write A Review';
+export default function ReviewForm({formType, reviewId}) {
+    const { productId } = useParams();
     const dispatch = useDispatch();
 
     const currentUser = useSelector(state => state.session.user);
@@ -26,13 +25,13 @@ export default function ReviewForm() {
         };
     };
 
-    useEffect(() => {
-        if (formType === "Update Review") { 
-            dispatch(fetchReview(reviewId))
-        };
-    },[reviewId])
+    // useEffect(() => {
+    //     if (formType === "Update Review") { 
+    //         dispatch(fetchReview(reviewId))
+    //     };
+    // },[reviewId])
 
-
+    debugger
 
     const [title, setTitle] = useState(review ? review.title : ''); 
     const [rating, setRating] = useState(review ? review.rating : 1); 
@@ -57,7 +56,7 @@ export default function ReviewForm() {
         }
 
     };
-
+    console.log(review)
 
     return (
         <>

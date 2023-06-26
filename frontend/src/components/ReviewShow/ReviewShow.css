@@ -41,3 +41,61 @@
     color: gray;
     font-size: 14px;
 }
+
+.delete-button {
+    font-size: 12px;
+    /* padding: 0.25em 0.875em; */
+    min-height: 32px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 1; */
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.2s ease 0s;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    min-width: 5.5em;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.update-button {
+    font-size: 12px;
+    /* padding: 0.25em 0.875em; */
+    min-height: 32px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 1; */
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.2s ease 0s;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    min-width: 5.5em;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.review-user-actions {
+    display: flex;
+    gap: 10px;
+}

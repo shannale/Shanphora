@@ -12,6 +12,16 @@ import UserDropDown from './UserDropdown';
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
 
+  const scrollToLipsSection = () => {
+    const lipsSection = document.getElementById('lips-section');
+    lipsSection.scrollIntoView({ behavior: 'smooth' });
+  };
+  
+  const scrollToEyesSection = () => {
+    const eyesSection = document.getElementById('eyes-section');
+    eyesSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = <ProfileButton user={sessionUser} />;
@@ -39,6 +49,7 @@ function Navigation() {
                       S H A P H O R A
                     </NavLink>
 
+
                 </div>
                     <div className="home-links-container">
                       {/* {sessionLinks} */}
@@ -52,13 +63,13 @@ function Navigation() {
                 
                           </div>
 
-                          <div className="heart-icon">
+                          {/* <div className="heart-icon">
                              <BsPersonHearts />
                           </div>
 
                           <div className="community">
                              Community
-                          </div>
+                          </div> */}
 
                           <div className="vl"></div>
 
@@ -99,44 +110,18 @@ function Navigation() {
                 <a className="category-names"> </a>
               </li>
               <li>
-                <a className="category-names"> New </a>
-              </li>
-              <li>
-                <a className="category-names"> Brands </a>
-              </li>
-              <li>
                 <a className="category-names" href="/products/" > Makeup </a>
               </li>
               <li>
-                <a className="category-names"> Skincare </a>
+                <a className="category-names" onClick={scrollToLipsSection}> Eyes </a>
               </li>
               <li>
-                <a className="category-names"> Hair </a>
+                <a className="category-names" onClick={scrollToEyesSection}> Lips </a>
               </li>
               <li>
-                <a className="category-names"> Fragrance </a>
+                <a className="category-names"> Cheek </a>
               </li>
-              <li>
-                <a className="category-names"> Tools&nbsp;&&nbsp;Brushes </a>
-              </li>
-              <li>
-                <a className="category-names"> Bath&nbsp;&&nbsp;Body</a>
-              </li>
-              <li>
-                <a className="category-names"> Mini&nbsp;Size</a>
-              </li>
-              <li>
-                <a className="category-names"> Gifts </a>
-              </li>
-              <li>
-                <a className="category-names"> Beauty&nbsp;Under&nbsp;$20 </a>
-              </li>
-              <li>
-                <a className="category-names"> Sales&nbsp;&&nbsp;Offers </a>
-              </li>
-              <li>
-                <a className="category-names"> Clean&nbsp;Beauty </a>
-              </li>
+  
           </ul>
       </div>
 
