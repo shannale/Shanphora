@@ -1,7 +1,12 @@
+import linkedIn from "./Images/linked-in-icon.png"
+
 export function BottomBar () {
     return (
         <>
         <div className="bottom-bar-container">
+            <div className="bottom-icon">
+                {linkedIn}
+            </div>
             {/* <div className="bottom-bar">
                 About Sephora
             </div>
@@ -14,7 +19,7 @@ export function BottomBar () {
             <div className="bottom-bar">
                 Region & Languages
             </div> */}
-
+           
         </div>
         </>
     )
