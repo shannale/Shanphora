@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getReview, fetchReview, createReview, updateReview } from '../../store/review';
-import { Redirect } from 'react-router-dom';
 import './ReviewForm.css'
 
 
@@ -14,7 +13,6 @@ export default function ReviewForm() {
 
     const currentUser = useSelector(state => state.session.user);
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     let review = useSelector(getReview(reviewId)); 
 
@@ -41,7 +39,7 @@ export default function ReviewForm() {
     const [comment, setComment] = useState(review ? review.comment : '');
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         const newReview = {
             ...review,
@@ -58,14 +56,11 @@ export default function ReviewForm() {
             dispatch(updateReview(productId, newReview))
         }
 
-        setIsSubmitted(true);
     };
+
 
     return (
         <>
-        {isSubmitted ? (
-      <Redirect to={`/products/${productId}/`}/>
-        ) : (
             <form onSubmit={handleSubmit} className="review-form">
                 <h1 className='review-form-name'>{formType}</h1>
                 <label className='review-form-title'> Title:
@@ -94,7 +89,6 @@ export default function ReviewForm() {
                 </div>
 
             </form>
-        )}
         </>
     )
 };
