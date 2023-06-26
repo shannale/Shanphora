@@ -2,7 +2,7 @@ export function BottomBar () {
     return (
         <>
         <div className="bottom-bar-container">
-            <div className="bottom-bar">
+            {/* <div className="bottom-bar">
                 About Sephora
             </div>
             <div className="bottom-bar">
@@ -13,7 +13,7 @@ export function BottomBar () {
             </div>
             <div className="bottom-bar">
                 Region & Languages
-            </div>
+            </div> */}
 
         </div>
         </>
