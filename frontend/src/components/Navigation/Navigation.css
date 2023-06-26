@@ -693,6 +693,7 @@
 .product-image-home {
     width: 140px;
     height: 150px;
+    margin-top: 8%;
 }
 
 .home-products-container {
@@ -727,7 +728,7 @@
 
 .home-prod-container {
     margin-top: 1%;
-    box-shadow: rgba(220, 204, 204, 0.2) 0px 0px 6px;
+    box-shadow: rgba(3, 3, 3, 0.2) 0px 0px 6px;
     width: 220px;
     height: 260px;
 }
@@ -748,10 +749,6 @@
     margin-bottom: -10px;
     margin-top: -30px; */
 }
-
-.product-item {
-    /* Add styling for the product items */
-}
   
 @keyframes bounce {
     0% {
@@ -766,5 +763,5 @@
 }
   
 .bounce {
-    animation: bounce 0.3s;
+    animation: bounce 0.5s;
 }
