@@ -25,7 +25,7 @@ class Api::ReviewsController < ApplicationController
         if @review.update(review_params)
             render :show
         else
-            render json: @review.errors.full_messages, status: 422
+            render json: ["Your comment needs to be longer than 5 characters"], status: 422
         end
     end
     

@@ -41,7 +41,6 @@
       }) 
     end
 
-
     dior_lip_oil = Product.create!(
       name: 'Lip Glow Oil',
       price: 40,
@@ -52,6 +51,36 @@
     dior_lip_oil_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip1.jpg")
     dior_lip_oil.photo.attach(io: dior_lip_oil_attachment, filename: 'dior_lip_oil')
 
+    charlotte_bronzer = Product.create!(
+      name: 'Beautiful Skin Sun-Kissed Glow Cream Bronzer',
+      price: 58,
+      category: 'Cheek',
+      brand: 'Charlotte Tilbury',
+      description: 'A 16-hour wear cream bronzer in 4 beautiful sun-kissed shades for face and body that blurs skin, hydrates with hyaluronic acid, and is sweatproof.'
+      )
+    charlotte_bronzer_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek6.jpg")
+    charlotte_bronzer.photo.attach(io: charlotte_bronzer_attachment, filename: 'charlotte_bronzer')
+
+    natasha_palette = Product.create!(
+          name: 'Glam Eyeshadow Palette',
+          price: 69,
+          category: 'Eyes',
+          brand: 'Natasha Denona',
+          description: 'An everyday palette that creates super-dramatic smokey eyes as well as a variety of natural and extreme glam looks.'
+          )
+    natasha_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye10.jpg")
+    natasha_palette.photo.attach(io: natasha_palette_attachment, filename: 'natasha_palette')
+
+    patrick_blush = Product.create!(
+      name: 'Major Headlines Double-Take Crème & Powder Blush',
+      price: 36,
+      category: 'Cheek',
+      brand: 'PATRICK TA',
+      description: 'A compact with two complementary blush formulas that give you full, bold color—guaranteed to turn heads.'
+      )
+    patrick_blush_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek1.jpg")
+    patrick_blush.photo.attach(io: patrick_blush_attachment, filename: 'patrick_blush')
+
     tower_28_lip = Product.create!(
       name: 'ShineOn Lip Jelly Non-StickyGloss',
       price: 16,
@@ -61,6 +90,16 @@
       )
       tower_28_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip2.jpg")
       tower_28_lip.photo.attach(io: tower_28_lip_attachment, filename: 'tower_28_lip')
+    
+    abh_palette = Product.create!(
+      name: 'Soft Glam Eyeshadow Palette',
+      price: 45,
+      category: 'Eyes',
+      brand: 'Anastasia Beverly Hills',
+      description: 'An everyday to night palette with 14 shades, including essential mattes and glam shimmer finishes.'
+      )
+    abh_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye6.jpg")
+    abh_palette.photo.attach(io: abh_palette_attachment, filename: 'abh_palette')
 
     ysl_lip = Product.create!(
       name: 'Candy Glaze Lip Gloss Stick',
@@ -72,6 +111,16 @@
       ysl_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip3.jpg")
       ysl_lip.photo.attach(io: ysl_lip_attachment, filename: 'ysl_lip')
 
+    nars_bronzer = Product.create!(
+      name: 'Mini Laguna Bronzer Powder Talc-Free',
+      price: 19,
+      category: 'Cheek',
+      brand: 'NARS',
+      description: 'An iconic powder bronzer in nine, talc-free shades that creates instant warmth and a long-wearing natural looking glow.'
+      )
+    nars_bronzer_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek8.jpg")
+      nars_bronzer.photo.attach(io: nars_bronzer_attachment, filename: 'nars_bronzer')
+
     tarte_lip = Product.create!(
       name: 'Maracuja Juicy Lip Balm',
       price: 24,
@@ -82,15 +131,15 @@
       tarte_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip4.jpg")
       tarte_lip.photo.attach(io: tarte_lip_attachment, filename: 'tarte_lip')
 
-    grande_lip = Product.create!(
-      name: 'GrandeLIPS Hydrating Lip Plumper Gloss',
-      price: 27,
-      category: 'Lips',
-      brand: 'Grande Cosmetics',
-      description: 'A high-gloss, volumizing lip plumper infused with a nurturing cocktail of Volulip™ and hyaluronic acid for immediate and long-term hydrating benefits.'
+    dior_backstage_palette = Product.create!(
+      name: 'BACKSTAGE Eyeshadow Palette',
+      price: 52,
+      category: 'Eyes',
+      brand: 'Dior',
+      description: 'An all-in-one eyeshadow and primer palette with one primer and eight blendable shades in matte and shimmer finishes.'
       )
-      grande_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip7.jpg")
-      grande_lip.photo.attach(io: grande_lip_attachment, filename: 'grande_lip')
+    dior_backstage_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye8.jpg")
+    dior_backstage_palette.photo.attach(io: dior_backstage_palette_attachment, filename: 'dior_backstage_palette')
 
 
     fenty_lip = Product.create!(
@@ -112,16 +161,6 @@
       )
       rare_beauty_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip8.jpg")
       rare_beauty_lip.photo.attach(io: rare_beauty_lip_attachment, filename: 'rare_beauty_lip')
-  
-    dior_plump = Product.create!(
-      name: 'Dior Addict Lip Maximizer Plumping Gloss',
-      price: 40,
-      category: 'Lips',
-      brand: 'Dior',
-      description: 'The iconic Dior Addict Lip Maximizer plumping lip gloss gets a refresh with a new 90% natural-origin formula, a reimagined case and updated shades.'
-      )
-      dior_plump_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip9.jpg")
-      dior_plump.photo.attach(io: dior_plump_attachment, filename: 'dior_plump')
 
     fenty_plump = Product.create!(
       name: 'Gloss Bomb Heat Universal Lip Luminizer + Plumper',
@@ -132,6 +171,16 @@
       )
       fenty_plump_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip10.jpg")
       fenty_plump.photo.attach(io: fenty_plump_attachment, filename: 'fenty_plump')
+
+    mario_skin_perfector = Product.create!(
+        name: 'SoftSculpt® Transforming Skin Perfector',
+        price: 34,
+        category: 'Cheek',
+        brand: 'MAKEUP BY MARIO',
+        description: 'A three-in-one powder to perfect, illuminate, and set makeup for a radiant glow with an airbrush effect on skin.'
+        )
+    mario_skin_perfector_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek7.jpg")
+    mario_skin_perfector.photo.attach(io: mario_skin_perfector_attachment, filename: 'mario_skin_perfector')
 
     pat_lip = Product.create!(
         name: 'SatinAllure™ Lipstick',
@@ -163,6 +212,16 @@
         sephora_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye2.jpg")
         sephora_palette.photo.attach(io: sephora_palette_attachment, filename: 'sephora_palette')
 
+    grande_lip = Product.create!(
+      name: 'GrandeLIPS Hydrating Lip Plumper Gloss',
+      price: 27,
+      category: 'Lips',
+      brand: 'Grande Cosmetics',
+      description: 'A high-gloss, volumizing lip plumper infused with a nurturing cocktail of Volulip™ and hyaluronic acid for immediate and long-term hydrating benefits.'
+      )
+      grande_lip_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip7.jpg")
+      grande_lip.photo.attach(io: grande_lip_attachment, filename: 'grande_lip')
+
     kaja_palette = Product.create!(
           name: 'Eye Bento Bouncy Eyeshadow Trio',
           price: 26,
@@ -193,15 +252,15 @@
       mini_tarte_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye5.jpg")
       mini_tarte.photo.attach(io: mini_tarte_attachment, filename: 'mini_tarte')
 
-      abh_palette = Product.create!(
-          name: 'Soft Glam Eyeshadow Palette',
-          price: 45,
-          category: 'Eyes',
-          brand: 'Anastasia Beverly Hills',
-          description: 'An everyday to night palette with 14 shades, including essential mattes and glam shimmer finishes.'
-          )
-      abh_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye6.jpg")
-      abh_palette.photo.attach(io: abh_palette_attachment, filename: 'abh_palette')
+      rare_beauty_cream_blush = Product.create!(
+        name: 'Stay Vulnerable Melting Cream Blush',
+        price: 22,
+        category: 'Cheek',
+        brand: 'Rare Beauty by Selena Gomez',
+        description: 'A breakthrough, mistake-proof, liquid-like cream blush that melts into a second skin for the most natural-looking wash of soft-focus color.'
+        )
+    rare_beauty_cream_blush_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek5.jpg")
+    rare_beauty_cream_blush.photo.attach(io: rare_beauty_cream_blush_attachment, filename: 'rare_beauty_cream_blush')
 
       naked_palette = Product.create!(
           name: 'Mini Naked3 Eyeshadow Palette',
@@ -213,16 +272,6 @@
       naked_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye7.jpg")
       naked_palette.photo.attach(io: naked_palette_attachment, filename: 'naked_palette')
 
-      dior_backstage_palette = Product.create!(
-          name: 'BACKSTAGE Eyeshadow Palette',
-          price: 52,
-          category: 'Eyes',
-          brand: 'Dior',
-          description: 'An all-in-one eyeshadow and primer palette with one primer and eight blendable shades in matte and shimmer finishes.'
-          )
-      dior_backstage_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye8.jpg")
-      dior_backstage_palette.photo.attach(io: dior_backstage_palette_attachment, filename: 'dior_backstage_palette')
-
       too_faced_palette = Product.create!(
           name: 'Born This Way The Natural Nudes Eyeshadow Palette',
           price: 52,
@@ -233,15 +282,65 @@
       too_faced_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye9.jpg")
       too_faced_palette.photo.attach(io: too_faced_palette_attachment, filename: 'too_faced_palette')
 
-      natasha_palette = Product.create!(
-          name: 'Glam Eyeshadow Palette',
-          price: 69,
-          category: 'Eyes',
-          brand: 'Natasha Denona',
-          description: 'An everyday palette that creates super-dramatic smokey eyes as well as a variety of natural and extreme glam looks.'
+      charlotte_blush = Product.create!(
+          name: 'Matte Beauty Blush Wands',
+          price: 42,
+          category: 'Cheek',
+          brand: 'Charlotte Tilbury',
+          description: 'A highly pigmented matte, liquid blush for a fresh, flushed look to revive your complexion. Inspired by Charlotte’s best-selling beauty light wands, dot and blend to apply.'
           )
-      natasha_palette_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Eye+Category/eye10.jpg")
-      natasha_palette.photo.attach(io: natasha_palette_attachment, filename: 'natasha_palette')
+      charlotte_blush_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek2.jpg")
+      charlotte_blush.photo.attach(io: charlotte_blush_attachment, filename: 'charlotte_blush')
+
+      benefit_highlighter = Product.create!(
+          name: 'Cookie and Tickle Powder Highlighters',
+          price: 35,
+          category: 'Cheek',
+          brand: 'Benefit Cosmetics',
+          description: 'A silky-soft, superfine powder highlighter.'
+          )
+      benefit_highlighter_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek3.jpg")
+      benefit_highlighter.photo.attach(io: benefit_highlighter_attachment, filename: 'benefit_highlighter')
+
+      dior_blush = Product.create!(
+          name: 'Rosy Glow Blush',
+          price: 40,
+          category: 'Cheek',
+          brand: 'Dior',
+          description: 'A secret weapon to create the appearance of naturally rosy cheeks for a fresh, glowy effect.'
+          )
+      dior_blush_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek4.jpg")
+      dior_blush.photo.attach(io: dior_blush_attachment, filename: 'dior_blush')
+
+      milk_cream_bronze_stick = Product.create!(
+          name: 'Matte Cream Bronzer Stick',
+          price: 24,
+          category: 'Cheek',
+          brand: 'MILK MAKEUP',
+          description: 'An award-winning cream bronzer stick that builds and blends effortlessly to create sunkissed warmth with a natural-looking finish in seconds.'
+          )
+      milk_cream_bronze_stick_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek9.jpg")
+      milk_cream_bronze_stick.photo.attach(io: milk_cream_bronze_stick_attachment, filename: 'milk_cream_bronze_stick')
+
+      dior_plump = Product.create!(
+        name: 'Dior Addict Lip Maximizer Plumping Gloss',
+        price: 40,
+        category: 'Lips',
+        brand: 'Dior',
+        description: 'The iconic Dior Addict Lip Maximizer plumping lip gloss gets a refresh with a new 90% natural-origin formula, a reimagined case and updated shades.'
+        )
+        dior_plump_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Lip+Category/lip9.jpg")
+        dior_plump.photo.attach(io: dior_plump_attachment, filename: 'dior_plump')
+
+      benefit_liquid_highlighter = Product.create!(
+          name: 'High Beam Satin Pink Liquid Highlighter',
+          price: 21,
+          category: 'Cheek',
+          brand: 'Benefit Cosmetics',
+          description: 'A satiny-pink liquid highlighter that accents cheek and brow bones for a dewy glow.'
+          )
+      benefit_liquid_highlighter_attachment = URI.open("https://shaphora-seeds.s3.us-west-1.amazonaws.com/Cheek+Category/cheek10.jpg")
+      benefit_liquid_highlighter.photo.attach(io: benefit_liquid_highlighter_attachment, filename: 'benefit_liquid_highlighter')
 
 
   reviews = [

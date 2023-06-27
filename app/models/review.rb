@@ -23,7 +23,7 @@
 #
 class Review < ApplicationRecord
     validates :user_id, :product_id, :rating, :comment, :title, presence: true
-    validates :comment, length: { minimum: 5 }
+    validates :comment, length: { maximum: 255 }
 
     belongs_to :user
     

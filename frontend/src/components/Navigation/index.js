@@ -6,7 +6,7 @@ import SearchBar from '../SearchBar';
 import './Navigation.css';
 import { BsSuitHeart } from 'react-icons/bs';
 import { BsBasket3 } from 'react-icons/bs';
-import { BsPersonHearts } from 'react-icons/bs';
+// import { BsPersonHearts } from 'react-icons/bs';
 import UserDropDown from './UserDropdown';
 
 function Navigation() {
@@ -21,6 +21,12 @@ function Navigation() {
     const eyesSection = document.getElementById('eyes-section');
     eyesSection.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const scrollToCheekSection = () => {
+    const cheekSection = document.getElementById('cheek-section');
+    cheekSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   let sessionLinks;
   if (sessionUser) {
@@ -113,13 +119,13 @@ function Navigation() {
                 <a className="category-names" href="/products/" > Makeup </a>
               </li>
               <li>
-                <a className="category-names" onClick={scrollToLipsSection}> Eyes </a>
+                <a className="category-names" onClick={scrollToEyesSection}> Eyes </a>
               </li>
               <li>
-                <a className="category-names" onClick={scrollToEyesSection}> Lips </a>
+                <a className="category-names" onClick={scrollToLipsSection}> Lips </a>
               </li>
               <li>
-                <a className="category-names"> Cheek </a>
+                <a className="category-names" onClick={scrollToCheekSection}> Cheek </a>
               </li>
   
           </ul>
