@@ -9,10 +9,13 @@ import { BsBasket3 } from 'react-icons/bs';
 // import { BsPersonHearts } from 'react-icons/bs';
 import UserDropDown from './UserDropdown';
 // import ShoppingCart from '../ItemCount';
-import CartItems from '../CartItemsIndex';
+// import CartItems from '../CartItemsIndex';
+import { useHistory } from 'react-router-dom';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+
+  const history = useHistory();
 
   const scrollToLipsSection = () => {
     const lipsSection = document.getElementById('lips-section');
@@ -102,8 +105,7 @@ function Navigation() {
 
                           <div className="cart-icon">
                             <div className='shopping-cart-button'>  
-                                    <BsBasket3 /> 
-                                    <CartItems />
+                                    <BsBasket3 onClick={() => (history.push('/cartItems')) }/> 
                             </div>
                           </div>
 

@@ -1,11 +1,8 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { fetchCartItems } from "../../store/cart";
+import { useHistory } from 'react-router-dom';
 
 const ShoppingCart = ({ productId, cartItemId }) => {
-
-    
 };
 
 export default ShoppingCart;
