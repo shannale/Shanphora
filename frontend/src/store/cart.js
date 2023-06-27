@@ -25,7 +25,7 @@ const removeCartItem = (cartItemId) => (
 );
 
 export const fetchCartItems = () => async (dispatch) => {
-    const response = await fetch('/api/cartItems');
+    const response = await fetch('/api/cart_items');
 
     if (response.ok) {
         const cartItems = await response.json();
@@ -34,7 +34,7 @@ export const fetchCartItems = () => async (dispatch) => {
 }; 
 
 export const fetchCartItem = (cartItemId) => async (dispatch) => {
-    const response = await fetch(`/api/cartItems/${cartItemId}`);
+    const response = await fetch(`/api/cart_items/${cartItemId}`);
 
     if (response.ok) {
         const cartItem = await response.json(); 
@@ -43,12 +43,12 @@ export const fetchCartItem = (cartItemId) => async (dispatch) => {
 };
   
 export const createCartItem = (cartItem) => async (dispatch) => {
-    const response = await csrfFetch(`/api/cartItem`, {
+    const response = await csrfFetch(`/api/cart_items`, {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(cartItem)
+        body: JSON.stringify({cartItem: cartItem})
     });
 
     if (response.ok) {
@@ -58,7 +58,7 @@ export const createCartItem = (cartItem) => async (dispatch) => {
 }; 
 
 export const updateCartItem = (cartItem) => async (dispatch) => {
-    const response = await csrfFetch(`/api/cartItems/${cartItem.id}`, {
+    const response = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
         method: 'PATCH', 
         headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const updateCartItem = (cartItem) => async (dispatch) => {
 
   
 export const deleteCartItem = (cartItemId) => async (dispatch) => {
-    const response = await csrfFetch(`/api/cartItems/${cartItemId}`, {
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: 'DELETE'
     }); 
 

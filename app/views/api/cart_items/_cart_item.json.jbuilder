@@ -4,3 +4,4 @@ json.extract! cart_item,
   :product_id,
   :product,
   :quantity
+

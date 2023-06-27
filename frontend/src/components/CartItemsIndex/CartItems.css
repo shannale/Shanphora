@@ -1,0 +1,62 @@
+.cart-product-brand {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.cart-product-name {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-weight: 250;
+    font-size: 14px;
+}
+
+.cart-product-price {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-weight: bold;
+
+}
+
+.cart-product-quantity {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    color: black;
+    font-weight: 250;
+}
+
+.cart-items-container {
+    margin-left: 10%;
+}
+
+.cart-item-container {
+    display: flex;
+}
+
+.cart-item-details {
+    margin-top: 6%;
+    margin-left: 30px;
+    line-height: 110%;
+}
+
+.cart-product-separator {
+    margin-right: 50%;
+    width: 50%;
+    height: 1px;
+    color: rgb(255, 246, 246);
+    margin-top: 2%;
+}
+
+.cart-title {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 6%;
+    font-size: 25px;
+}
+
+.cart-product-image {
+    margin-top: 2%;
+    width: 150px;
+    height: 150px;
+}

@@ -1,22 +1,33 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../../store/product";
 import ReviewIndex from "../ReviewIndex";
+import { createCartItem } from "../../store/cart";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
+  const history = useHistory();
   const product = useSelector((state) => state.products[productId]);
   const reviews = useSelector((state) => Object.values(state.reviews)
     || []);
+
+  const currentUser = useSelector(state => state.session.user);
   
 
   useEffect(() => {
     dispatch(fetchProduct(productId));
   }, [dispatch, productId]);
+
+  const handleAddToCart = () => {
+      const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
+      
+      dispatch(createCartItem(cartItem));
+      history.push('/cartItems');
+  };
 
   if (product === undefined){
     return null;
@@ -37,7 +48,7 @@ const ProductShow = () => {
                 <div className="product-description-show">{product.description}</div>
 
                 <div className="product-showing">
-                  <button className="product-add"> 
+                  <button className="product-add" onClick={handleAddToCart}> 
                     <div className="add-button-words">
                       Add to Basket 
                       <br />
@@ -62,8 +73,4 @@ const ProductShow = () => {
 };
 
 export default ProductShow;
-
-
-
-
 

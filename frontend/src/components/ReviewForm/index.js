@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getReview, fetchReview, createReview, updateReview } from '../../store/review';
+import { getReview, createReview, updateReview } from '../../store/review';
 import './ReviewForm.css'
 
 
@@ -31,7 +31,6 @@ export default function ReviewForm({formType, reviewId}) {
     //     };
     // },[reviewId])
 
-    debugger
 
     const [title, setTitle] = useState(review ? review.title : ''); 
     const [rating, setRating] = useState(review ? review.rating : 1); 
@@ -56,7 +55,6 @@ export default function ReviewForm({formType, reviewId}) {
         }
 
     };
-    console.log(review)
 
     return (
         <>

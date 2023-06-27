@@ -664,6 +664,7 @@
     min-width: 10.47em;
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .add-button-words {
