@@ -112,6 +112,14 @@
     margin-top: -3%;
 }
 
+.cart-icon {
+    padding: 0%;
+    margin: -1%;
+    margin-left: 3%;
+    margin-bottom: -2%;
+    margin-top: -1.6%;
+}
+
 .community {
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-size: 14px;
@@ -745,23 +753,6 @@
     height: 260px;
 }
 
-/* .reviews-title {
-    border-top: 1px solid rgb(224, 220, 220);
-    font-family: "helvetica neue",helvetica,arial,sans-serif;
-    font-weight: bold;
-    margin-top: -5%;
-    margin-left: 4%;
-    font-size: 25px;
-    padding-top: 20px;
-} */
-
-.product-break-line {
-    /* height: 40px;
-    margin-left: 30px;
-    margin-bottom: -10px;
-    margin-top: -30px; */
-}
-  
 @keyframes bounce {
     0% {
       transform: translateY(0);
@@ -777,4 +768,13 @@
 .bounce {
     animation: bounce 0.5s;
 }
+
+.shopping-cart-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+}
+
 

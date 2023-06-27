@@ -26,6 +26,8 @@ class User < ApplicationRecord
 
     has_many :reviews, dependent: :destroy
 
+    has_many :cart_items, dependent: :destroy
+
     before_validation :ensure_session_token
 
     

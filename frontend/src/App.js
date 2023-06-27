@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/" component={CategoryHome} />
         <Route exact path="/products/" component={Products} />
         <Route exact path="/products/:productId" component={ProductShow} />
+        {/* <Route exact path="/cart_items/:cartId" component={CartItemsIndex} /> */}
       </Switch>
       <Route path="/" component={BottomBar} />
     </>

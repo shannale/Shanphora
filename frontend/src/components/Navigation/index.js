@@ -8,6 +8,8 @@ import { BsSuitHeart } from 'react-icons/bs';
 import { BsBasket3 } from 'react-icons/bs';
 // import { BsPersonHearts } from 'react-icons/bs';
 import UserDropDown from './UserDropdown';
+// import ShoppingCart from '../ItemCount';
+import CartItems from '../CartItemsIndex';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -98,8 +100,11 @@ function Navigation() {
                             <BsSuitHeart />
                           </div>
 
-                          <div className="heart-icon">
-                            <BsBasket3 />
+                          <div className="cart-icon">
+                            <div className='shopping-cart-button'>  
+                                    <BsBasket3 /> 
+                                    <CartItems />
+                            </div>
                           </div>
 
                       
