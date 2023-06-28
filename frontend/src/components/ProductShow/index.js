@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../../store/product";
 import ReviewIndex from "../ReviewIndex";
-import { createCartItem } from "../../store/cart";
+import { createCartItem, updateCartItem } from "../../store/cart";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,8 @@ const ProductShow = () => {
   const reviews = useSelector((state) => Object.values(state.reviews)
     || []);
 
+  const cartItems = useSelector((state) => state.cartItems)
+
   const currentUser = useSelector(state => state.session.user);
   
 
@@ -23,10 +25,16 @@ const ProductShow = () => {
   }, [dispatch, productId]);
 
   const handleAddToCart = () => {
-      const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
       
-      dispatch(createCartItem(cartItem));
-      history.push('/cartItems');
+      if (productId in cartItems) {
+        const cartItem = {userId: currentUser.id, productId: productId, quantity: cartItems[productId].quantity + 1, id: cartItems[productId].id}
+        dispatch(updateCartItem(cartItem));
+        history.push('/cartItems');
+      } else {
+        const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
+        dispatch(createCartItem(cartItem));
+        history.push('/cartItems');
+      };
   };
 
   if (product === undefined){
