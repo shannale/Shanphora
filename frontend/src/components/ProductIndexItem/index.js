@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 const ProductIndexItem = ({ product }) => {
     return (
-        <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}>
-            <>
+        <>
             <div>
                 <div className="product-container">
                     <div>
+        <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}>
                         <img src={product.photoUrl} className="product-image-index"/>
+        </Link>
                             <div className="info-container">
                                 <div className="product-index-brand">
                                     {product.brand}
@@ -25,7 +26,6 @@ const ProductIndexItem = ({ product }) => {
 
                 </div>
             </>
-        </Link>
     );
 };
 

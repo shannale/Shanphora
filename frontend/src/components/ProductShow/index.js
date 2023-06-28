@@ -37,6 +37,7 @@ const ProductShow = () => {
       };
   };
 
+
   if (product === undefined){
     return null;
   };

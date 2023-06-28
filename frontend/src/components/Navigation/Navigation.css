@@ -328,7 +328,10 @@
 
 .wrapper {
     position: relative;
+    /* display: flex; */
+    /* overflow: hidden; */
 }
+
 #left-arrow {
     z-index: 999;
     top: 50%;
@@ -692,10 +695,11 @@
     /* max-width: 1000px; */
     /* margin: auto; */
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     width: 2000px;
     height: 100px;
     margin-bottom: 15%;
+    /* overflow: hidden; */
 }
 
 .product-home-container {
