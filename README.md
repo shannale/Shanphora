@@ -1,7 +1,7 @@
 
 # README
 
-![Animated GIF]([https://tenor.com/view/pink-bow-pink-love-bow-gif-25047654](https://github.com/shannale/Shaphora/blob/main/pinkbow.gif))
+![Animated GIF](https://github.com/shannale/Shaphora/blob/main/pinkbow.gif)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
