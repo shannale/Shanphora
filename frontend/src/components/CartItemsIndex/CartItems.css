@@ -292,6 +292,7 @@
     background-color: transparent;
     border: none;
     width: 150px;
+    z-index: 999;
 }
 
 .modal-button-confirm {

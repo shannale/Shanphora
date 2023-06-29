@@ -4,6 +4,7 @@
     opacity: 50%;
     margin-left: 750%;
     margin-top: 12%;
+    /* z-index: -1000; */
 }
 
 .bar-logo-github {

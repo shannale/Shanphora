@@ -11,6 +11,8 @@ import UserDropDown from './UserDropdown';
 // import ShoppingCart from '../ItemCount';
 // import CartItems from '../CartItemsIndex';
 import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -31,6 +33,19 @@ function Navigation() {
     const cheekSection = document.getElementById('cheek-section');
     cheekSection.scrollIntoView({ behavior: 'smooth' });
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const section = searchParams.get('section');
+
+    if (section) {
+      const sectionElement = document.getElementById(`${section}-section`);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.search]);
 
 
   let sessionLinks;
@@ -126,13 +141,13 @@ function Navigation() {
                 <a className="category-names" href="/products/" > Makeup </a>
               </li>
               <li>
-                <a className="category-names" onClick={scrollToEyesSection}> Eyes </a>
+                <a className="category-names" href="/?section=eyes" onClick={scrollToEyesSection}> Eyes </a>
               </li>
               <li>
-                <a className="category-names" onClick={scrollToLipsSection}> Lips </a>
+                <a className="category-names" href="/?section=lips" onClick={scrollToLipsSection}> Lips </a>
               </li>
               <li>
-                <a className="category-names" onClick={scrollToCheekSection}> Cheek </a>
+                <a className="category-names" href="/?section=cheek" onClick={scrollToCheekSection}> Cheek </a>
               </li>
   
           </ul>
