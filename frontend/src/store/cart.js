@@ -24,11 +24,13 @@ const removeCartItem = (cartItemId) => (
       cartItemId
     })
 );
+
 export const removeCartItems = () => (
     ({
         type: REMOVE_CART_ITEMS,
     })
 )
+
 export const fetchCartItems = () => async (dispatch) => {
     const response = await fetch('/api/cart_items');
 
@@ -86,6 +88,14 @@ export const deleteCartItem = (productId, cartItemId) => (dispatch) => {
     .catch(error => console.error('Error:', error))
 }
 
+export const deleteCartItems = () => (dispatch) => {
+    csrfFetch('/api/cart_items/destroy_all', {
+        method: "DELETE",
+    })
+    .then(() => dispatch(removeCartItems()))
+    .catch(error => console.error('Error:', error))
+}
+
 const cartItemsReducer = (state = {}, action) => {
     Object.freeze(state);
     const nextState = {...state}
@@ -99,9 +109,11 @@ const cartItemsReducer = (state = {}, action) => {
         case REMOVE_CART_ITEM:
             delete nextState[action.cartItemId]
             return nextState;
+        case REMOVE_CART_ITEMS:
+            return {};
         default:
             return nextState;
-    }
+    };
 };
 
 export default cartItemsReducer;

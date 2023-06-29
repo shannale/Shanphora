@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
-import { CiSearch } from 'react-icons/ci';
+// import { CiSearch } from 'react-icons/ci';
+// import { BsSearchHeart } from 'react-icons/bs'
 
 const SearchBar = () => {
 	const [searchQuery, setSearchQuery] = useState('');
@@ -18,7 +19,7 @@ const SearchBar = () => {
 
 	return (
 		<form className='search-bar' onSubmit={handleSearchQuery}>
-			<div>
+			<div className='search-contents'>
 				<div className='search-bar-input'>
 					<input
 						className='search-input'

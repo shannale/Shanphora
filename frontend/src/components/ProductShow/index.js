@@ -20,7 +20,6 @@ const ProductShow = () => {
   const currentUser = useSelector(state => state.session.user);
   
 
-  
   useEffect(() => {
     dispatch(fetchProduct(productId));
   }, [dispatch, productId]);
@@ -30,8 +29,8 @@ const ProductShow = () => {
     
     if (productId in cartItems) {
       const cartItem = {userId: currentUser.id, productId: productId, quantity: cartItems[productId].quantity + 1, id: cartItems[productId].id}
-      dispatch(updateCartItem(cartItem));
-      history.push('/cartItems');
+      dispatch(updateCartItem(cartItem))
+      .then(() => history.push('/cartItems'));
     } else {
       const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
       dispatch(createCartItem(cartItem));

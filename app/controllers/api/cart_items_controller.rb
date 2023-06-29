@@ -35,6 +35,11 @@ class Api::CartItemsController < ApplicationController
         render :show
       end
 
+      def destroy_all 
+        current_user.cart_items.destroy_all
+        render json: ["destroyed all cart items"]
+      end 
+
       private
       def cart_item_params
         params.require(:cart_item).permit(:product_id, :user_id, :quantity)

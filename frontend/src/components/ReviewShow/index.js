@@ -17,6 +17,7 @@ const ReviewShow = ({ product, review, currentUser, formStateChanger, formCurrRe
 
   const handleDelete = () => {
     dispatch(deleteReview(product, review.id));
+    formStateChanger('Write A Review')
   };
 
   const handleUpdate = () => {

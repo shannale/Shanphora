@@ -9,7 +9,7 @@ const CategoryHomeIndex = ({ product }) => {
             <>
             <div>
                 <div className="product-home-container">
-                    <div>
+                    <div className="products-on-home">
                         <img src={product.photoUrl} className="product-image-home"/>
                             <div className="home-products-container">
                                 <div className="product-home-brand">

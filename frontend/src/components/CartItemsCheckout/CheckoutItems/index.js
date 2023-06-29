@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import CheckoutModal from "../CheckoutModal";
-import { removeCartItems } from "../../store/cart";
+import { deleteCartItems } from "../../../store/cart";
+import { useDispatch } from "react-redux";
 
 const CheckoutItems = ({ cartItems }) => {
     const [showModal, setShowModal] = useState(false);
+    const dispatch = useDispatch();
 
     const calculateSubtotal = () => {
         let subtotal = 0;
@@ -20,8 +22,12 @@ const CheckoutItems = ({ cartItems }) => {
     };
 
     const handleCheckout = () => {
+        setShowModal(true);
+        dispatch(deleteCartItems()); 
+    };
+
+    const handleCheckoutClose = () => {
         setShowModal(false);
-        removeCartItems(); 
     };
 
     return (
@@ -36,9 +42,9 @@ const CheckoutItems = ({ cartItems }) => {
         <div className="estimated-total">
             Estimated Total: <span className="total">${calculateEstimatedTotal().toFixed(2)} </span>
         </div>
-        <button className="checkout-button" onClick={() => setShowModal(true)} >Checkout Items</button>
+        <button className="checkout-button" onClick={handleCheckout} >Checkout Items</button>
         {showModal && (
-        <CheckoutModal closeModal={() => setShowModal(false)} handleCheckout={handleCheckout} />
+        <CheckoutModal closeModal={() => setShowModal(false)} handleCheckoutClose={handleCheckoutClose} />
         )}
         </>
     );

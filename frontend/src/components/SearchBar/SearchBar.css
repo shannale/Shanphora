@@ -3,7 +3,7 @@
     z-index: 2;
     background-color: transparent;
     box-shadow: none;
-    width: 400px;
+    width: 500px;
     border-radius: 9999px;
     padding: 10px 12px 10px 36px;
     display: flex;
@@ -15,18 +15,19 @@
     padding-right: 12px;
     color: rgb(0, 0, 0);
     /* background-color: transparent; */
-    background-color: #f6f6f8;
+    background-color: #a5a5b6;
     border-width: 0px;
     box-shadow: none;
     appearance: none;
     padding-left: 36px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: transparent url() no-repeat 13px center;
-}
-
-.search-icon {
-    /* margin-top: 10%; */
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search-heart' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z'/%3E%3Cpath d='M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z'/%3E%3C/svg%3E") no-repeat 13px center;
 }
    
+.search-bar-input {
+    background-color: rgb(251, 249, 249);
+    width: 500px;
+    border-radius: 9999px;
+}
 
   

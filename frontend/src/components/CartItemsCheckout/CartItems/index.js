@@ -1,12 +1,13 @@
 import { useEffect } from "react"; 
 import { useSelector, useDispatch} from "react-redux";
-import { fetchCartItems } from "../../store/cart";
+import { fetchCartItems } from "../../../store/cart";
 import CartItemsIndex from "../CartItemsIndex";
+// import CheckoutItems from "../../CheckoutItems";
 import CheckoutItems from "../CheckoutItems";
 
 export const CartItems = () => {
     const cartItems = useSelector((state) => Object.values(state.cartItems));
-    const currentUser = useSelector(state => state.session.user);
+    // const currentUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
     useEffect(() => {

@@ -6,7 +6,7 @@ import { Products } from "./components/Products";
 import { BottomBar } from "./components/BottomBar";
 import ProductShow  from "./components/ProductShow/index.js"
 import CategoryHome from "./components/CategoryHome";
-import CartItems from "./components/CartItems";
+import CartItems from "./components/CartItemsCheckout/CartItems";
 
 function App() {
   return (

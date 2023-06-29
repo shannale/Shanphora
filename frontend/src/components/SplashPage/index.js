@@ -14,16 +14,26 @@ export const SplashPage = () => {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
+    // const handleNextSlide = () => {
+    //     setSlideIndex((prevIndex) => (prevIndex + 1) % imageCount);
+    // };
+    
+    // const handlePrevSlide = () => {
+    //     setSlideIndex((prevIndex) =>
+    //       prevIndex === 0 ? imageCount - 1 : prevIndex - 1
+    //     );
+    // };
+    
     const handleNextSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % imageCount);
-    };
-    
-    const handlePrevSlide = () => {
+      };
+      
+      const handlePrevSlide = () => {
         setSlideIndex((prevIndex) =>
           prevIndex === 0 ? imageCount - 1 : prevIndex - 1
         );
-    };
-    
+      };
+
     const imageCount = 6;
   
 

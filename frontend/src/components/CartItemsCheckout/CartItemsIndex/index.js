@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CartItems.css";
 import { useDispatch } from "react-redux";
-import { deleteCartItem } from "../../store/cart";
-import { updateCartItem } from "../../store/cart";
+import { deleteCartItem } from "../../../store/cart";
+import { updateCartItem } from "../../../store/cart";
 
 const CartItemsIndex = ({ cartItem }) => {
     const dispatch = useDispatch();

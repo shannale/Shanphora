@@ -2,7 +2,7 @@ import React from "react";
 import linkedin from "./Images/linkedin.png"
 import github from "./Images/github.png"
 
-const CheckoutModal = ({ handleCheckout }) => {
+const CheckoutModal = ({ handleCheckoutClose }) => {
   return (
     <div className="checkout-modal">
       <div className="checkout-modal-content">
@@ -20,7 +20,7 @@ const CheckoutModal = ({ handleCheckout }) => {
                     </a>
                 </div>
         <div className="exit-modal-button">
-          <button className="modal-button-confirm" onClick={handleCheckout}>
+          <button className="modal-button-confirm" onClick={handleCheckoutClose}>
             SHOP AGAIN
           </button>
         </div>
