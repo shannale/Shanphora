@@ -36,6 +36,14 @@ export const fetchProduct = (productId) => async (dispatch) => {
     }
 };
 
+export const fetchSearch = (searchTerm) => async (dispatch) => {
+    const response = await fetch(`/api/products/search?query=${searchTerm}`)
+    if (response.ok) {
+        const payload = await response.json()
+        dispatch(receiveProducts(payload));
+    }
+};
+
 // reducer ...controls which data gets sent 
 const productReducer = (state, action) => {
     Object.freeze(state);

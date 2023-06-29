@@ -7,6 +7,8 @@ import { BottomBar } from "./components/BottomBar";
 import ProductShow  from "./components/ProductShow/index.js"
 import CategoryHome from "./components/CategoryHome";
 import CartItems from "./components/CartItemsCheckout/CartItems";
+import { SearchIndex } from "./components/SearchIndex";
+// import SearchBar from "./components/SearchBar";
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Route path="/" component={Navigation}/>
       </header>
       <Switch>
+        <Route exact path="/search/:query" component={SearchIndex} />
         <Route exact path="/cartItems/" component={CartItems} />
         <Route exact path="/products/" component={Products} />
         <Route exact path="/products/:productId" component={ProductShow} />

@@ -9,4 +9,10 @@ class Api::ProductsController < ApplicationController
         @product = Product.find(params[:id])
         render :show
     end 
+
+    def search 
+        query = params[:query]
+        @products = Product.where('name ILIKE ? OR brand ILIKE ? OR description ILIKE ? OR category ILIKE ?', "%#{query}%", "%#{query}%", "%#{query}%", "%#{query}%")
+        render :index
+    end 
 end
