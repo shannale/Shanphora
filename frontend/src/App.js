@@ -8,6 +8,7 @@ import ProductShow  from "./components/ProductShow/index.js"
 import CategoryHome from "./components/CategoryHome";
 import CartItems from "./components/CartItemsCheckout/CartItems";
 
+
 function App() {
   return (
     <>
