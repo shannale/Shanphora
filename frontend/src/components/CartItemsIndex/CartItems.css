@@ -207,3 +207,155 @@
     margin-left: 10%;
     margin-top: 6%;
 } */
+
+.checkout-modal {
+    display: flex;
+    justify-content: space-between;
+    /* width: 400px;
+    height: 400px; */
+    /* background-color: white; */
+    margin-right: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    box-shadow: rgb(255 255 255) 0px 0px 2px 6px, rgb(0 0 0) 0px 0px 2px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-modal-content {
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* padding: 200px; */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    position: absolute;
+    border-radius: 5px;
+    width: 400px;
+    height: 420px;
+    /* display: flex;
+    justify-content: space-between; */
+    /* background-color: white;
+    border-radius: 5px;
+    height: 600px;
+    width: 482px;
+    object-fit: contain;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+.checkout-first-message {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(202, 33, 33);
+    margin-bottom: 2%;
+    margin-top: 8%;
+    margin-left: 28%;
+    font-size: 30px;
+}
+
+.checkout-second-message {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(218, 22, 22);
+    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-left: 23%;
+    font-size: 20px;
+}
+.checkout-title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin-bottom: 10%;
+    margin-top: 8%;
+    margin-left: 24%;
+    font-size: 30px;
+}
+
+.exit-modal-button {
+    /* margin-bottom: 1%; */
+    margin-top: 5%;
+    margin-left: 33%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 150px;
+}
+
+.modal-button-confirm {
+    font-size: 12px;
+    /* padding: 0.25em 1.125em; */
+    min-height: 44px;
+    font-weight: var(--font-weight-bold);
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.2s ease 0s;
+    background-color: rgb(207, 17, 44);
+    display: flex;
+    width: 80%;
+    min-width: 5.5em;
+    cursor: pointer;
+}
+
+.end-checkout-message {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin-bottom: 1%;
+    margin-left: 14.5%;
+    font-size: 20px;
+}
+
+.end-linkedin {
+    width: 70px;
+    height: 70px;
+}
+
+.end-github {
+    width: 70px;
+    height: 70px;
+}
+
+.icon-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6%;
+}
+
+.checkout-name {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin-top: -9%;
+    margin-left: 41%;
+}
+
+.subtotal {
+    margin-left: 27%;
+}
+
+.total {
+    margin-left: 34.5%;
+}
+
+.shipping {
+    margin-left: 25%;
+}

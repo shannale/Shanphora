@@ -3,19 +3,27 @@ import { Link } from "react-router-dom";
 import "./CartItems.css";
 import { useDispatch } from "react-redux";
 import { deleteCartItem } from "../../store/cart";
+import { updateCartItem } from "../../store/cart";
 
 const CartItemsIndex = ({ cartItem }) => {
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity);
 
     const handleRemoveCartItem = (cartItemId) => {
-        dispatch(deleteCartItem(cartItemId));
+        dispatch(deleteCartItem(cartItem.product.id, cartItemId));
     };
 
     const handleQuantityChange = (event) => {
         const newQuantity = parseInt(event.target.value);
         setQuantity(newQuantity);
-    };
+
+        const updatedCartItem = {
+            ...cartItem,
+            quantity: newQuantity,
+          };
+          dispatch(updateCartItem(updatedCartItem));
+        };
+
 
     return (
         <>

@@ -73,11 +73,11 @@ export const updateCartItem = (cartItem) => async (dispatch) => {
 }; 
 
 
-export const deleteCartItem = (cartItemId) => (dispatch) => {
+export const deleteCartItem = (productId, cartItemId) => (dispatch) => {
     csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: "DELETE",
     })
-    .then(() => dispatch(removeCartItem(cartItemId)))
+    .then(() => dispatch(removeCartItem(productId)))
     .catch(error => console.error('Error:', error))
 }
 
@@ -91,10 +91,9 @@ const cartItemsReducer = (state = {}, action) => {
         case RECEIVE_CART_ITEM:
             nextState[action.cartItems.product.id] = action.cartItems
             return { ...nextState};
-        debugger
         case REMOVE_CART_ITEM:
             delete nextState[action.cartItemId]
-            return { ...action.nextState};
+            return nextState;
         default:
             return state;
     }

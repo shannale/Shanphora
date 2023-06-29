@@ -27,7 +27,7 @@ export const CartItems = () => {
             </div>
             <div className="checkout-container">
                 <div className="check-out-container-contents">
-                    <CheckoutItems />
+                    <CheckoutItems cartItems={cartItems}/>
                 </div>
             </div>
         </div>
