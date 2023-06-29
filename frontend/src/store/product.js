@@ -40,7 +40,7 @@ export const fetchSearch = (searchTerm) => async (dispatch) => {
     const response = await fetch(`/api/products/search?query=${searchTerm}`)
     if (response.ok) {
         const payload = await response.json()
-        dispatch(receiveProducts(payload));
+        dispatch(receiveProducts(payload))
     }
 };
 
@@ -50,7 +50,7 @@ const productReducer = (state, action) => {
     const nextState = {...state}
     switch(action.type) {
         case RECEIVE_PRODUCTS:
-            return {...nextState, ...action.products};
+            return {...action.products};
         case RECEIVE_PRODUCT:
             return {...nextState, [action.product.id]: {...action.product, ['reviews']: {...action.reviews}}};
         default:

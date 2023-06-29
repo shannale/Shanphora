@@ -7,9 +7,8 @@ export const SearchIndex = () => {
 
     return (
         <>
-        <div> Search </div>
         <div className="product-index">
-        {/* <div className="index-title"> Makeup </div> */}
+        <div className="index-title"> Search Results</div>
                 {products.map((product) => (
                     <ProductIndexItem key={product.id} product={product} />
                 ))}
