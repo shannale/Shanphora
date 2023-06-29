@@ -1,7 +1,9 @@
 
 # README
 
-![Animated GIF](https://github.com/shannale/Shaphora/blob/main/pinkbow.gif)
+<div align="center">
+  <img src="relative/path/to/your/animated.gif](https://github.com/shannale/Shaphora/blob/main/pinkbow.gif" alt="Animated GIF">
+</div>
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
