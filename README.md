@@ -1,4 +1,7 @@
+
 # README
+
+![https://tenor.com/view/pink-bow-pink-love-bow-gif-25047654](https://github.com/Shaphora/Bow.gif)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
