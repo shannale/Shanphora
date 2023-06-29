@@ -1,6 +1,7 @@
 import { useEffect } from "react"; 
 import { useSelector, useDispatch} from "react-redux";
 import { fetchAllProducts } from "../../store/product";
+import { fetchCartItems } from "../../store/cart";
 import ProductIndexItem from "../ProductIndexItem/index.js";
 
 export const Products = () => {
@@ -9,7 +10,10 @@ export const Products = () => {
 
     useEffect(() => {
         dispatch(fetchAllProducts())
+        dispatch(fetchCartItems())
     }, [dispatch])
+
+
 
 
     return (

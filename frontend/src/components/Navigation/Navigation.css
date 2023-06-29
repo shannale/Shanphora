@@ -2,12 +2,13 @@
     text-decoration: none;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    /* width: 100px; */
-    /* height: 100px; */
 }
 
 .home-link-title {
     margin-left: 10%;
+    /* width: 100px; */
+    /* height: 200px; */
+    z-index: 999;
 }
 
 .top-line {
@@ -773,6 +774,13 @@
     padding: 0;
     cursor: pointer;
     appearance: none;
+}
+
+.product-show-no-user {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: bold;
+    padding-top: 15%;
+    font-size: 18px;
 }
 
 

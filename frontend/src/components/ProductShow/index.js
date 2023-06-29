@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProduct } from "../../store/product";
 import ReviewIndex from "../ReviewIndex";
-import { createCartItem, updateCartItem } from "../../store/cart";
+import { createCartItem, updateCartItem} from "../../store/cart";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -20,24 +20,25 @@ const ProductShow = () => {
   const currentUser = useSelector(state => state.session.user);
   
 
+  
   useEffect(() => {
     dispatch(fetchProduct(productId));
   }, [dispatch, productId]);
-
+  
+  
   const handleAddToCart = () => {
-      
-      if (productId in cartItems) {
-        const cartItem = {userId: currentUser.id, productId: productId, quantity: cartItems[productId].quantity + 1, id: cartItems[productId].id}
-        dispatch(updateCartItem(cartItem));
-        history.push('/cartItems');
-      } else {
-        const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
-        dispatch(createCartItem(cartItem));
-        history.push('/cartItems');
-      };
+    
+    if (productId in cartItems) {
+      const cartItem = {userId: currentUser.id, productId: productId, quantity: cartItems[productId].quantity + 1, id: cartItems[productId].id}
+      dispatch(updateCartItem(cartItem));
+      history.push('/cartItems');
+    } else {
+      const cartItem = {userId: currentUser.id, productId: productId, quantity: 1 }
+      dispatch(createCartItem(cartItem));
+      history.push('/cartItems');
+    };
   };
-
-
+  
   if (product === undefined){
     return null;
   };
@@ -57,6 +58,7 @@ const ProductShow = () => {
                 <div className="product-description-show">{product.description}</div>
 
                 <div className="product-showing">
+                  {currentUser ?
                   <button className="product-add" onClick={handleAddToCart}> 
                     <div className="add-button-words">
                       Add to Basket 
@@ -65,7 +67,8 @@ const ProductShow = () => {
                         for Standard Shipping
                       </div>
                     </div>
-                  </button>
+                  </button> : <div className="product-show-no-user">Please Sign In To Shop</div>
+                  }
                 </div>
             </div>
 

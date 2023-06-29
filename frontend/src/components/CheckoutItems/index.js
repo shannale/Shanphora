@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CheckoutModal from "../CheckoutModal";
+import { removeCartItems } from "../../store/cart";
 
 const CheckoutItems = ({ cartItems }) => {
     const [showModal, setShowModal] = useState(false);
@@ -20,6 +21,7 @@ const CheckoutItems = ({ cartItems }) => {
 
     const handleCheckout = () => {
         setShowModal(false);
+        removeCartItems(); 
     };
 
     return (
@@ -34,7 +36,7 @@ const CheckoutItems = ({ cartItems }) => {
         <div className="estimated-total">
             Estimated Total: <span className="total">${calculateEstimatedTotal().toFixed(2)} </span>
         </div>
-        <button className="checkout-button" onClick={() => setShowModal(true)}>Checkout Items</button>
+        <button className="checkout-button" onClick={() => setShowModal(true)} >Checkout Items</button>
         {showModal && (
         <CheckoutModal closeModal={() => setShowModal(false)} handleCheckout={handleCheckout} />
         )}

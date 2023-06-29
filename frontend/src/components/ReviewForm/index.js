@@ -81,9 +81,11 @@ export default function ReviewForm({formType, reviewId}) {
                     onChange={(e) => {setComment(e.target.value)}}
                     />
                 </label>
-                <div className='review-button-container'>
-                    <button className='review-form-button'>Submit</button>
-                </div>
+                {review && 
+                    <div className='review-button-container'>
+                        <button className='review-form-button'>Submit</button>
+                    </div> 
+                }
 
             </form>
         </>

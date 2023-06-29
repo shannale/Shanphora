@@ -13,8 +13,8 @@ const CartItemsIndex = ({ cartItem }) => {
         dispatch(deleteCartItem(cartItem.product.id, cartItemId));
     };
 
-    const handleQuantityChange = (event) => {
-        const newQuantity = parseInt(event.target.value);
+    const handleQuantityChange = (e) => {
+        const newQuantity = parseInt(e.target.value);
         setQuantity(newQuantity);
 
         const updatedCartItem = {

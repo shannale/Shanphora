@@ -35,15 +35,16 @@ function Navigation() {
   };
   const location = useLocation();
 
+  
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const section = searchParams.get('section');
-
+    
     if (section) {
       const sectionElement = document.getElementById(`${section}-section`);
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' });
-      }
+      } 
     }
   }, [location.search]);
 
