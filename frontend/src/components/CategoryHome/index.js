@@ -13,6 +13,7 @@ export const CategoryHome = ({ category }) => {
 
   return (
     <>
+    <div className="products-home-home">
       <div className="products-home">
         <div className="index-title"> </div>
         {products.map((product) =>
@@ -32,6 +33,8 @@ export const CategoryHome = ({ category }) => {
           ) : null
         )}
       </div>
+
+    </div>
     </>
   );
 };

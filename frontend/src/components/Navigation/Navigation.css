@@ -615,7 +615,7 @@
 
 .info-container { 
     width: 220px; 
-    height: 100px;
+    height: 50px;
 } 
 
 .index-title {
@@ -624,6 +624,7 @@
     font-size: 35px;
     margin-top: 5%;
     margin-left: 3%;
+    overflow: hidden;
 } 
 
 .show-title {
@@ -684,6 +685,7 @@
 .show-product {
     width: 500px;
     height: 500px;
+    /* overflow: scroll; */
 }
 
 .products-home {
@@ -695,14 +697,22 @@
     flex-direction: row;
     /* flex-wrap: nowrap; */
     width: 2000px;
-    height: 100px;
-    margin-bottom: 15%;
+    height: 300px;
+    /* margin-bottom: -8%; */
     /* overflow: hidden; */
     /* overflow: scroll; */
 }
 
+.products-home-home {
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+    overflow:auto;
+}
+
 .products-on-home {
     overflow: scroll;
+    /* height: 100%; */
 }
 
 .product-home-container {
@@ -710,13 +720,16 @@
     padding: 6%;
     /* width: 600px; */
     /* height: 500px; */
-    margin-left: 8%;
+    margin-left: 10%;
     margin-top: 10%;
     text-decoration: none;
     /* margin-bottom: -40%; */
     margin-right: 10%;
     /* margin-bottom: 20%; */
     user-select: none;
+    width: 150px;
+    /* height: 50%; */
+    /* overflow: hidden; */
 }
 
 .product-image-home {
@@ -724,11 +737,13 @@
     height: 150px;
     margin-top: 8%;
     user-select: none;
+    /* overflow: hidden; */
 }
 
 .home-products-container {
     width: 120px; 
     height: 180px;
+    /* overflow: hidden; */
 }
 
 .product-home-brand {
@@ -746,6 +761,7 @@
     font-size: 10px;
     color: black;
     line-height: 120%;
+    /* overflow: hidden; */
 }
 
 .cate-name {
@@ -758,10 +774,12 @@
 }
 
 .home-prod-container {
-    margin-top: 1%;
+    margin-top: 10%;
     box-shadow: rgba(3, 3, 3, 0.2) 0px 0px 6px;
     width: 220px;
     height: 260px;
+    overflow: hidden;
+    /* overflow: scroll; */
 }
 
 @keyframes bounce {
