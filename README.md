@@ -4,11 +4,11 @@
 </p>
 
 <p align="center"> 
-[SHAPHORA](https://shaphora-e331876b9fde.herokuapp.com/ "SHAPHORA")
+  <a href="https://shaphora-e331876b9fde.herokuapp.com/">SHAPHORA</a>
 </p>
 
 <p align="center">
-Shaphora is a clone of the cosmetic webstore Sephora.
+Shaphora is a clone of the cosmetic webstore Sephora. <br>
 </p>
 
 <br> </br>
