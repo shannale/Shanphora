@@ -3,8 +3,7 @@
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
 
-[SHAPHORA](https://shaphora-e331876b9fde.herokuapp.com/)
-  
+[SHAPHORA](https://shaphora-e331876b9fde.herokuapp.com/ "SHAPHORA")
 <br/> 
 
 This README would normally document whatever steps are necessary to get the
