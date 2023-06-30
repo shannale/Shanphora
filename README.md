@@ -3,15 +3,16 @@
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
 
-<div style="text-align: center;">
+<div align="center">
   <a href="https://shaphora-e331876b9fde.herokuapp.com/">SHAPHORA</a>
 </div>
 
 <p align="center">
-Shaphora is a clone of the cosmetic webstore Sephora. <br>
+  Shaphora is a clone of the cosmetic webstore Sephora.
 </p>
 
-<di align="center">  Overview
+<div align="center">
+  Overview
 </div>
 
 
