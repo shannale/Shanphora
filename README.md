@@ -3,7 +3,7 @@
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
 
-<div align="center">
+<div text-align="center">
   <a href="https://shaphora-e331876b9fde.herokuapp.com/">SHAPHORA</a>
 </div>
 
@@ -11,11 +11,9 @@
   Shaphora is a clone of the cosmetic webstore Sephora.
 </p>
 
-<div align="center">
+<div text-align="center">
   Overview
 </div>
-
-
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
