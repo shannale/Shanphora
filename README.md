@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/shannale/Shaphora/blob/main/pinkbow.gif" alt="Animated GIF">
+  <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
 <p align="center> SHAPHORA </p>
   
