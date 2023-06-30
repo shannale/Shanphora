@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
@@ -10,10 +9,14 @@
 <p align="center">
   Shaphora is a clone of the cosmetic webstore Sephora.
   <hr style="border: none; border-top: 1px dashed #999; background-color: pink;">
-  <hr style="border: none; border-top: 1px dashed pink;">
 </p>
 
-<h2> Overview </h2>
+## Overview
 
-<h2> Technologies Used </h2>
+https://github.com/shannale/Shaphora/assets/123720213/fd41d826-6fd9-4b7e-97dc-fe51a95a24ca
 
+## Technologies Used
+* Ruby on Rails
+* PostgreSQL
+* React
+* Redux
