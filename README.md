@@ -2,8 +2,8 @@
 <p align="center">
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
-<p align="center> SHAPHORA </p>
-![SHAPHORA]https://shaphora-e331876b9fde.herokuapp.com/
+
+[SHAPHORA](https://shaphora-e331876b9fde.herokuapp.com/)
   
 <br/> 
 
