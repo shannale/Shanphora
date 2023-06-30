@@ -3,7 +3,7 @@
   <img src="https://github.com/shannale/Shaphora/blob/main/makeup.gif" alt="Animated GIF">
 </p>
 
-<div text-align="center">
+<div align="center">
   <a href="https://shaphora-e331876b9fde.herokuapp.com/">SHAPHORA</a>
 </div>
 
