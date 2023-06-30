@@ -1,9 +1,10 @@
-![Animated GIF](https://github.com/shannale/Shaphora/blob/main/pinkbow.gif)
+
 <p align="center">
   <img src="https://github.com/shannale/Shaphora/blob/main/pinkbow.gif" alt="Animated GIF">
 </p>
 <p align="center> SHAPHORA </p>
-
+  
+<br/> 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
