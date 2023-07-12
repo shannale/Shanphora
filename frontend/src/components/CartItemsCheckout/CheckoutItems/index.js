@@ -36,7 +36,7 @@ const CheckoutItems = ({ cartItems }) => {
             Merchandise Subtotal: <span className="subtotal">${calculateSubtotal().toFixed(2)}</span> 
         </div>
         <div className="shipping-checkout">
-            Shipping and Handling: <span className="shipping">{calculateSubtotal() >= 100 ? "FREE" : "$10.00"} </span>
+            Shipping and Handling: {cartItems.length > 0 ? <span className="shipping">{calculateSubtotal() >= 100 ? "FREE" : "$10.00"} </span> : null }
         </div>
         <hr className="checkout-break"></hr>
         <div className="estimated-total">

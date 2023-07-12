@@ -30,4 +30,14 @@
     border-radius: 9999px;
 }
 
+.no-results {
+    margin-top: 10%;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    margin-left: 2%;
+    color: black;
+    margin-bottom: 2%;
+    font-size: 40px;
+    font-weight: 850;
+}
+
   

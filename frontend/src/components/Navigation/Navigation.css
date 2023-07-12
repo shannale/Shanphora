@@ -368,7 +368,6 @@
 .wrapper .carousel {
     /* white-space: nowrap; */
     /* overflow: hidden; */
-    cursor: pointer;
     font-size: 0px;
     /* width: 100%; */
     display: flex;

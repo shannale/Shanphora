@@ -9,9 +9,9 @@ export const SearchIndex = () => {
         <>
         <div className="product-index">
         <div className="index-title"> Search Results</div>
-                {products.map((product) => (
+                {products.length !== 0 ? products.map((product) => (
                     <ProductIndexItem key={product.id} product={product} />
-                ))}
+                )) : <div className="no-results"> No Results Found </div>}
         </div>
         </>
     );

@@ -80,3 +80,12 @@
     font-weight: 500;
     font-size: 18px;
 }
+
+.error {
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(164, 17, 17);
+    margin-top: 1%;
+    margin-left: 1%;
+}
