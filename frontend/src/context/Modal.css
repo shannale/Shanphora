@@ -82,6 +82,11 @@
     transition: background-color 0.2s ease 0s;
     min-width: 14.5em;
     margin-top: 3%;
+    cursor: pointer;
+}
+
+.signup-button:hover{
+  font-weight: bold;
 }
 
 

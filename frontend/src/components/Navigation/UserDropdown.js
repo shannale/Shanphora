@@ -31,6 +31,15 @@ function UserDropDown() {
     <>
       <button onClick={openMenu} style={{ border: "none", outline: "none", boxShadow: "none" }} className="button-box">
         <img className='user-profile-img' src={user} alt='' />
+        <div className="profile-message-container">
+            <div className='profile-signin-message'>
+                Be Logged In
+                <br></br>
+                <div className="free-shipping-signin">
+                    to SHOP Shapora
+                </div>
+            </div>
+        </div>
       </button>
       <div className={!showMenu ? "hidden" : null}> 
         <ul className="profile-dropdown user-dropdown">

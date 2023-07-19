@@ -104,17 +104,6 @@ function Navigation() {
                               {sessionLinks}
                           </div>
 
-                          <div className="profile-message-container">
-                              <div className='profile-signin-message'>
-                                  Be Logged In
-                                  <br></br>
-                                  <div className="free-shipping-signin">
-                                      to SHOP Shapora
-                                  </div>
-                              </div>
-
-                          </div>
-
                           <div className="heart-icon">
                             <BsSuitHeart />
                           </div>

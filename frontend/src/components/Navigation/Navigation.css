@@ -108,7 +108,7 @@
 .heart-icon {
     padding: 0%;
     margin: -1%;
-    margin-left: 3%;
+    margin-left: 10%;
     margin-bottom: -2%;
     margin-top: -3%;
 }
@@ -162,8 +162,12 @@
     min-width: 5.5em;
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: 500;
+    cursor: pointer;
+}
 
-  }
+.login-button:hover{
+    font-weight: bold;
+}
   
 .sign-up button {
     font-size: 12px;
@@ -188,7 +192,11 @@
     min-width: 5.5em;
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: 500;
+    cursor: pointer;
+}
 
+.sign-up:hover{
+    font-weight: bold;
 }
 
 .hidden {
@@ -219,6 +227,11 @@
     align-items: center;
     padding-top: 5%;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    font-weight: bold;
 }
 
 .drop-message {
@@ -233,14 +246,16 @@
 
 .button-box {
     background-color: transparent;
-    margin-left: 320%;
+    /* margin-left: 320%; */
     cursor: pointer;
+    width: 60px;
 }
 
 .profile-signin-message {
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: 600;
     font-size: 12px;
+    width: 100px;
 }
 
 .free-shipping-signin {
@@ -253,7 +268,7 @@
     line-height: 12px;
     margin-bottom: -10px;
     margin-top: -30px;
-    margin-left: 10%;
+    margin-left: 90%;
 }
 
 .logout-button {
@@ -325,6 +340,11 @@
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: 500;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+.demo-login-button:hover{
+    font-weight: bold;
 }
 
 .wrapper {
