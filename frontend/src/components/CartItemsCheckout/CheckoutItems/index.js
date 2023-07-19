@@ -40,7 +40,7 @@ const CheckoutItems = ({ cartItems }) => {
         </div>
         <hr className="checkout-break"></hr>
         <div className="estimated-total">
-            Estimated Total: <span className="total">${calculateEstimatedTotal().toFixed(2)} </span>
+            Estimated Total: {cartItems.length > 0 ? <span className="total">${calculateEstimatedTotal().toFixed(2)} </span> : null}
         </div>
         <button className="checkout-button" onClick={handleCheckout} >Checkout Items</button>
         {showModal && (
