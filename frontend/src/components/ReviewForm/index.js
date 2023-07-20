@@ -26,6 +26,7 @@ export default function ReviewForm({ formType, reviewId }) {
     const [rating, setRating] = useState(review ? review.rating : 1);
     const [comment, setComment] = useState(review ? review.comment : '');
     const [errors, setErrors] = useState({}); 
+    const [updateSuccess, setUpdateSuccess] = useState(false);
 
     useEffect(() => {
         if (review && formType === 'Update Review') {
@@ -66,6 +67,7 @@ export default function ReviewForm({ formType, reviewId }) {
             dispatch(createReview(productId, newReview));
         } else {
             dispatch(updateReview(productId, newReview));
+            setUpdateSuccess(true);
         }
         } else {
             setErrors(newErrors); 
@@ -120,6 +122,7 @@ export default function ReviewForm({ formType, reviewId }) {
                         {errors.title && <div className="error">{errors.title}</div>}
                         {errors.rating && <div className="error">{errors.rating}</div>}
                         {errors.comment && <div className="error">{errors.comment}</div>}
+                        {updateSuccess && <div className="update-success">Your review has been updated!</div>}
                     </div>
             </form>
             </>

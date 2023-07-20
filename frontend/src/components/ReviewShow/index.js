@@ -2,6 +2,7 @@ import './ReviewShow.css'
 import React from 'react';
 import { deleteReview } from '../../store/review';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 const ReviewShow = ({ product, review, currentUser, formStateChanger, formCurrReviewId}) => {
   const dispatch = useDispatch();

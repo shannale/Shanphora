@@ -1,7 +1,3 @@
-.review-form {
-
-}
-
 .review-form-name {
     font-family: "helvetica neue",helvetica,arial,sans-serif;
     font-weight: bold;
@@ -88,4 +84,11 @@
     color: rgb(164, 17, 17);
     margin-top: 1%;
     margin-left: 1%;
+}
+
+.update-success {
+    margin-top: 1%;
+    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
 }
