@@ -27,6 +27,14 @@ export default function ReviewForm({ formType, reviewId }) {
     const [comment, setComment] = useState(review ? review.comment : '');
     const [errors, setErrors] = useState({}); 
 
+    useEffect(() => {
+        if (review && formType === 'Update Review') {
+          setTitle(review.title);
+          setRating(review.rating);
+          setComment(review.comment);
+        }
+    }, [review, formType]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -117,3 +125,4 @@ export default function ReviewForm({ formType, reviewId }) {
             </>
     );
 }
+

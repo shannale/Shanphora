@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 
-const ReviewIndex = ({ product, reviews }) => {
+const ReviewIndex = ({ product, reviews, review }) => {
     
 const currentUser = useSelector(state => state.session.user);
 

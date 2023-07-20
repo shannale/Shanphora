@@ -17,6 +17,11 @@ function SignupForm(){
   
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      if (!email.includes("@") || !email.includes(".")) {
+        return setErrors(["Email is invalid. Please enter a valid email address."]);
+      }
+
       if (password === confirmPassword) {
         setErrors([]);
         return dispatch(sessionActions.signup({ firstName, lastName, email, password }))
