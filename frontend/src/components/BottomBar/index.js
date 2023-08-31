@@ -1,8 +1,7 @@
-// import linkedinlogo from "./Images/white-linkedin.png"
 import "./BottomBar.css"
 import githublogo from "./Images/gray-github.png"
-// import linkedin from "./Images/linkedin.png"
 import { AiOutlineLinkedin } from 'react-icons/ai'
+
 export function BottomBar () {
     return (
         <>
