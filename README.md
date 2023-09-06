@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  Shaphora is a clone of the cosmetic webstore Sephora.
+  Shaphora is a single-page clone of the cosmetic webstore Sephora.
   <hr style="border: none; border-top: 1px dashed #999; background-color: pink;">
 </p>
 
