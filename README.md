@@ -18,6 +18,7 @@ https://github.com/shannale/Shaphora/assets/123720213/fd41d826-6fd9-4b7e-97dc-fe
 ### Technologies Used
 * Ruby on Rails
 * PostgreSQL
+* Javascript
 * React
 * Redux
 
