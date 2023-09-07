@@ -31,7 +31,7 @@ https://github.com/shannale/Shaphora/assets/123720213/fd41d826-6fd9-4b7e-97dc-fe
 <img width="1492" alt="sign-up" src="https://github.com/shannale/Shaphora/assets/123720213/efeb6f1c-4885-40d3-b2d6-68c10cfbb28f">
 
 ### Search Bar 
-* Users can search for products avaiable through Shaphora by brand, name, category, or description
+* Users can search for products avaiable through Shaphora by brand, name, category or description
 
 ### Product Index 
 * Users are able view products through an index page
